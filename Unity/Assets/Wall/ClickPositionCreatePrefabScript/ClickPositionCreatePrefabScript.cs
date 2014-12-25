@@ -8,7 +8,7 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 	private Vector3 clickPosition;
 	// Use this for initialization
 	int buttunCount = 0;
-	float time = 0.0f;
+	//float time = 0.0f;
 	void Start () {
 		
 	}
@@ -35,9 +35,8 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 
 		}
 
-			Destroy(Prefab,5.0f);
 		
-		//シーンから削除する場合
+
 		//GameObject.Destroy(Prefab);
 	}
 	//void OnTriggerEnter3D (Collider3D c){
