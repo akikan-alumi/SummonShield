@@ -4,19 +4,22 @@ using System.Collections;
 public class ClickPositionCreatePrefabScript : MonoBehaviour {
 	// 生成したいPrefab
 	public GameObject Prefab;
+
 	// クリックした位置座標
 	private Vector3 clickPosition;
 	// Use this for initialization
 	int buttunCount = 0;
 	//float time = 0.0f;
 	void Start () {
+
+
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if( buttunCount< 5){
+		//if( buttunCount< 5){
 			// マウス入力で左クリックをした瞬間
 			if (Input.GetMouseButtonDown(0)) {
 				// ここでの注意点は座標の引数にVector2を渡すのではなく、Vector3を渡すことである。
@@ -33,12 +36,9 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 
 			}
 
-		}
+		//}
 
-		
 
-		//GameObject.Destroy(Prefab);
 	}
-	//void OnTriggerEnter3D (Collider3D c){
-	//}
+
 }
