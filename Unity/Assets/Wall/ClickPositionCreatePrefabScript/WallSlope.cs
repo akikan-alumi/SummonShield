@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class WallSlope : MonoBehaviour {
-	private Transform target = null;
+	public Transform target;
 	// Use this for initialization
 	void Start () {
 	
