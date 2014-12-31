@@ -1,4 +1,4 @@
-﻿// define LOOKATをコメント化でルックアット方式、コメント化で角度指定で回転
+// define LOOKATをコメント化でルックアット方式、コメント化で角度指定で回転
 #define LOOKAT
 
 using UnityEngine;
