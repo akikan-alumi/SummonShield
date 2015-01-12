@@ -25,6 +25,7 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonNormal(){
 		Debug.Log ("Press Normal");
+		Application.LoadLevel("normalMode");
 	}
 	
 	/// <summary>
