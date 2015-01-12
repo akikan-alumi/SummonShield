@@ -4,9 +4,12 @@ using System.Collections;
 public class WallHit : MonoBehaviour {
 
 	public GameObject Prefab;
+	[SerializeField]
+	private float destroyTime = 5.0f;
 
 	// Use this for initialization
 	private void Start () {
+		Destroy (this.gameObject,destroyTime);
 	}
 	
 	// Update is called once per frame
@@ -14,11 +17,12 @@ public class WallHit : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.gameObject.CompareTag ("Player")) {
 			Destroy (Prefab);
-			Debug.Log ("gurimo");
+			Debug.Log ("PlayerHit");
 		}
         if (collision.gameObject.CompareTag("Enemy")) {
-            Destroy(Prefab);
-            Debug.Log("gurimo");
+            Destroy(this.gameObject);
+			Destroy(collision.gameObject);
+            Debug.Log("EnemyHit");
         }
 
 	}
