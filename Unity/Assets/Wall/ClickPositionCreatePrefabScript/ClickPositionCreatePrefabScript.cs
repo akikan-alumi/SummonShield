@@ -29,6 +29,7 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 				clickPosition.z = 10f;
 				// オブジェクト生成 : オブジェクト(GameObject), 位置(Vector3), 角度(Quaternion)
 				// ScreenToWorldPoint(位置(Vector3))：スクリーン座標をワールド座標に変換する
+				//Instantiate(Prefab,new Vector2(0,0),Quaternion.identity);
 				Instantiate(Prefab, Camera.main.ScreenToWorldPoint(clickPosition), Prefab.transform.rotation);
 				//ButtunCountAdd
 				buttunCount++;
