@@ -16,6 +16,10 @@ public class WallHit : MonoBehaviour {
 			Destroy (Prefab);
 			Debug.Log ("gurimo");
 		}
+        if (collision.gameObject.CompareTag("Enemy")) {
+            Destroy(Prefab);
+            Debug.Log("gurimo");
+        }
 
 	}
 }
