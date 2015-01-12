@@ -9,7 +9,7 @@ public class enemysAI : MonoBehaviour {
 	private float myLife = 5.0f;
 
     private void Start() {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        //target = GameObject.FindGameObjectWithTag("Player").transform;
 		Destroy (this.gameObject,myLife);
     }
 
