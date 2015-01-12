@@ -4,22 +4,16 @@ using System.Collections;
 public class WallSlope : MonoBehaviour {
 	public Transform target;
 	// Use this for initialization
-/*	void Start () {
-		transform.LookAt(target);
-		//transform.rotation = Quaternion.AngleAxis (30, Vector2.up);
-        this.transform.eulerAngles = new Vector3(0, 0, target.transform.rotation.z);
+	void Start () {
+		LookAt2D(obj);
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-	}*/
 
 	public GameObject obj;//playerを指定
 	
 	void Update() {
 		
-		LookAt2D(obj);
+
 		//Move(obj);
 
 

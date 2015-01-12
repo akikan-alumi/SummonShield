@@ -5,21 +5,24 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 	// 生成したいPrefab
 	public GameObject Prefab;
 
+	[SerializeField]
+	private int spawnMax = 5;
+
 	// クリックした位置座標
 	private Vector3 clickPosition;
 	// Use this for initialization
-	int buttunCount = 0;
 	//float time = 0.0f;
 	void Start () {
 
 		Debug.Log (Prefab);
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		//if( buttunCount< 5){
+		GameObject[] targets = GameObject.FindGameObjectsWithTag("Wall");
+	
+		if( targets.Length < spawnMax){
 			// マウス入力で左クリックをした瞬間
 			if (Input.GetMouseButtonDown(0)) {
 				// ここでの注意点は座標の引数にVector2を渡すのではなく、Vector3を渡すことである。
@@ -31,12 +34,10 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 				// ScreenToWorldPoint(位置(Vector3))：スクリーン座標をワールド座標に変換する
 				Instantiate(Prefab, clickPosition, Prefab.transform.rotation);
 				//ButtunCountAdd
-				buttunCount++;
-
 
 			}
 
-		//}
+		}
 
 
 	}
