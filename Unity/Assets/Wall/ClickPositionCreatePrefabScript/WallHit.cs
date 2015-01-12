@@ -11,9 +11,8 @@ public class WallHit : MonoBehaviour {
 	
 	// Update is called once per frame
 	//絵によってはOnCollisionEnter2D(Collision2D col)に変更の恐れあり
-	private void OnCollisionEnter (Collision col) {
+	private void OnCollisionEnter2D (Collision2D col) {
 		if (col.gameObject.CompareTag ("Player")) {
-			Debug.Log("OKOKOK");
 			Destroy (Prefab);
 		}
 
