@@ -11,9 +11,10 @@ public class WallHit : MonoBehaviour {
 	
 	// Update is called once per frame
 	//絵によってはOnCollisionEnter2D(Collision2D col)に変更の恐れあり
-	private void OnCollisionEnter2D (Collision2D col) {
-		if (col.gameObject.CompareTag ("Player")) {
+	private void OnTriggerEnter2D(Collider2D collision) {
+		if (collision.gameObject.CompareTag ("Player")) {
 			Destroy (Prefab);
+			Debug.Log ("gurimo");
 		}
 
 	}
