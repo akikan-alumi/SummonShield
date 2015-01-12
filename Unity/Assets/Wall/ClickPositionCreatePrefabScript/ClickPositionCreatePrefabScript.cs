@@ -24,13 +24,13 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 			if (Input.GetMouseButtonDown(0)) {
 				// ここでの注意点は座標の引数にVector2を渡すのではなく、Vector3を渡すことである。
 				// Vector3でマウスがクリックした位置座標を取得する
-				clickPosition = Input.mousePosition;
+				clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 				// Z軸修正
-				clickPosition.z = 10f;
+				clickPosition.z = 0f; 
 				// オブジェクト生成 : オブジェクト(GameObject), 位置(Vector3), 角度(Quaternion)
 				// ScreenToWorldPoint(位置(Vector3))：スクリーン座標をワールド座標に変換する
 				//Instantiate(Prefab,new Vector2(0,0),Quaternion.identity);
-				Instantiate(Prefab, Camera.main.ScreenToWorldPoint(clickPosition), Prefab.transform.rotation);
+				Instantiate(Prefab, clickPosition, Prefab.transform.rotation);
 				//ButtunCountAdd
 				buttunCount++;
 				//time count
