@@ -4,13 +4,38 @@ using System.Collections;
 public class WallSlope : MonoBehaviour {
 	public Transform target;
 	// Use this for initialization
-	void Start () {
+/*	void Start () {
 		transform.LookAt(target);
-        this.transform.eulerAngles = new Vector3(0, 0, 0);
+		//transform.rotation = Quaternion.AngleAxis (30, Vector2.up);
+        this.transform.eulerAngles = new Vector3(0, 0, target.transform.rotation.z);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+	}*/
+
+	public GameObject obj;//playerを指定
+	
+	void Update() {
+		
+		LookAt2D(obj);
+		//Move(obj);
+
+
+		
 	}
+
+	void LookAt2D(GameObject Wall) {
+		// 指定オブジェクトと回転させるオブジェクトの位置の差分(ベクトル)
+		Vector3 pos = target.transform.position - transform.position;
+		// ベクトルのX,Yを使い回転角を求める
+		float angle = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg;
+		Quaternion rotation = new Quaternion();
+		// 回転角は右方向が0度なので-90
+		rotation.eulerAngles = new Vector3(0, 0, angle - 220);
+		// 回転
+		transform.rotation = rotation;
+	}
+
 }
