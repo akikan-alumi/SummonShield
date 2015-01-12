@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class lookat2D : MonoBehaviour {
-    float speed = 1;
+    [SerializeField]
+	private float speed = 1;
     public GameObject obj;//playerを指定
 
     void Update() {
