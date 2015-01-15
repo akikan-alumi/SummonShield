@@ -6,19 +6,20 @@ public class Result : MonoBehaviour {
 
 	// 初期値セット
 	private int score = 0;
+	private int tempScore = 0;
 	private float dateTime = 0;
 	[SerializeField] 
 	private GameObject resultView;
 	[SerializeField]
 	private GameObject scoreTextObj;
 	[SerializeField]
-	private GameObject nowScore;
+	private GameObject canvas;
 	[SerializeField]
 	private GameObject nowScoreTextObj;
 	private Text nowScoreText;
 	private Text scoreText;
 	[SerializeField]
-	private float addSpeed = 1.5f;
+	private int addSpeed = 128;
 
 	void Start ()
 	{
@@ -31,15 +32,15 @@ public class Result : MonoBehaviour {
 	{
 
 		dateTime += Time.deltaTime;
-		score = (int)(dateTime);
+		tempScore = (int)(dateTime);
+		score = tempScore * addSpeed; 
 		nowScoreText.text = "score:" + score;
 		Debug.Log (dateTime);
 	}
 
 	public void GameOver()
 	{
-		score = (int)(dateTime);
-		nowScore.SetActive (false);
+		canvas.SetActive (false);
 		resultView.SetActive (true);
 		scoreText.text = "score:" + score;
 
