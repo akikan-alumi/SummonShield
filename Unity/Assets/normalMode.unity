@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
+  spawnMax: 5
 --- !u!4 &85623077
 Transform:
   m_ObjectHideFlags: 0
@@ -355,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
+  spawnMax: 5
 --- !u!4 &446068864
 Transform:
   m_ObjectHideFlags: 0
