@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 <<<<<<< HEAD
 
-	// 初期化
+	 初期化
 	void Start () {
 =======
 	private bool gameOver; //ゲームオーバーフラグ
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	// 初期化
 	void Start () {
 		 finish = gameOverObj.GetComponent<Result>();
->>>>>>> origin/Score
+/>>>>>> origin/Score
 	}
 	
 	// 毎フレームごとに更新
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.CompareTag("Enemy")) { // Enemyに当たったらゲームオーバーフラグをTrueに
 			Destroy(col.gameObject);
 			Debug.Log("PlayerHit");
-=======
+//=======
 	void OnTriggerEnter2D (Collider2D col){
 	if (col.gameObject.CompareTag("Enemy")) { // Enemyに当たったらゲームオーバーフラグをTrueに
 			finish.GameOver();
