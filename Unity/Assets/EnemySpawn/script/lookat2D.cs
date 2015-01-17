@@ -8,8 +8,7 @@ public class lookat2D : MonoBehaviour {
 
     void Update() {
 
-        LookAt2D(obj);
-        Move(obj);
+
 
 
     }
