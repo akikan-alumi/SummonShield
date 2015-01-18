@@ -8,10 +8,12 @@ public class lookat2D : MonoBehaviour {
 
     void Update() {
 
-
-
-
+		LookAt2D (obj);
     }
+
+	void FixedUpdate(){
+		Move (obj);
+	}
 
     void Move(GameObject target) {
         // (target.transform.position - transform.position)だけでは
