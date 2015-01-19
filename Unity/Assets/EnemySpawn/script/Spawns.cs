@@ -19,4 +19,5 @@ public class Spawns : MonoBehaviour {
 			Instantiate(prefab,this.transform.position,this.transform.rotation);
 		}
 	}
+
 }
