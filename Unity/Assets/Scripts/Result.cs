@@ -20,26 +20,37 @@ public class Result : MonoBehaviour {
 	private Text scoreText;
 	[SerializeField]
 	private int addSpeed = 128;
+	private GameObject[] spawners;
+	private bool gameOver;
+
 
 	void Start ()
 	{
 		scoreText = scoreTextObj.GetComponent<Text> ();
 		nowScoreText = nowScoreTextObj.GetComponent<Text> ();
+		gameOver = false;
+		spawners  = GameObject.FindGameObjectsWithTag("Spawner");
+
 
 	}
 	
 	void Update ()
 	{
-
-		dateTime += Time.deltaTime;
-		tempScore = (int)(dateTime);
-		score = tempScore * addSpeed; 
-		nowScoreText.text = "score:" + score;
-		Debug.Log (dateTime);
+		if(gameOver == false){
+			dateTime += Time.deltaTime;
+			tempScore = (int)(dateTime);
+			score = tempScore * addSpeed; 
+			nowScoreText.text = "score:" + score;
+			Debug.Log (dateTime);
+		}
 	}
 
 	public void GameOver()
 	{
+		gameOver = true;
+		foreach (GameObject spa in spawners) {
+			Destroy(spa);
+		}
 		canvas.SetActive (false);
 		resultView.SetActive (true);
 		scoreText.text = "score:" + score;

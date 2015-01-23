@@ -216,7 +216,7 @@ Transform:
   m_PrefabInternal: {fileID: 798787401}
   m_GameObject: {fileID: 85623075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 306, y: 329, z: 0}
+  m_LocalPosition: {x: 305, y: 329, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -426,7 +426,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 69ec031843c4e46489928f5d18b1e17f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 306
+      value: 305
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 69ec031843c4e46489928f5d18b1e17f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -568,7 +568,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 20, y: 89}
+  m_AnchoredPosition: {x: 113, y: 89}
   m_SizeDelta: {x: 588.349976, y: 79.9000015}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1282828710
@@ -701,7 +701,7 @@ GameObject:
   - 58: {fileID: 1437857051}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1100,6 +1100,7 @@ GameObject:
   - 114: {fileID: 1892601356}
   - 58: {fileID: 1892601360}
   - 50: {fileID: 1892601359}
+  - 114: {fileID: 1892601361}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1119,7 +1120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda3a270c61b075419f38667d1120088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverObj: {fileID: 85623075}
 --- !u!212 &1892601357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1183,6 +1183,18 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .49000001
   m_Center: {x: 0, y: 0}
+--- !u!114 &1892601361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1892601355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9c0317f722f3f42973dcb94525f721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverObj: {fileID: 85623075}
 --- !u!1 &1922415363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1258,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 10, y: -21}
+  m_AnchoredPosition: {x: 82, y: -21}
   m_SizeDelta: {x: 393.869995, y: 276.899994}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1991473972
@@ -1362,7 +1374,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -229, y: 120}
+  m_AnchoredPosition: {x: -161, y: 120}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &2007686785
