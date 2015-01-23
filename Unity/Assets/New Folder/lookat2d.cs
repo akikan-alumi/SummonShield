@@ -1,51 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DrilEnemy : MonoBehaviour {
+public class lookat2d : MonoBehaviour {
 	[SerializeField]
-	private int Hp = 1;
-<<<<<<< HEAD
-
-	// Use this for initialization
-	void Start () {
-
-=======
-	//[SerializeField]
-	//public GameObject player;
-	/*[SerializeField]
 	private float speed = 1;
-	public GameObject obj;//playerを指定*/
-	// Use this for initialization
-	void Start () {
-		//LookAt2D(obj);
-		//Move(obj);
->>>>>>> testbranch
-
-	}
-	private void OnTriggerEnter2D(Collider2D collision){
-		if (collision.gameObject.CompareTag ("Wall")) {
-			if (Hp <= 1) {
-				Destroy (this.gameObject);
-				Destroy(collision.gameObject);
-				Debug.Log ("PlayerHit");
-		
-			}else{
-				Hp--;
-				Destroy(collision.gameObject);
-			}
-		}else if (collision.gameObject.CompareTag ("Player")) {
-			Destroy(this.gameObject);		
-		}
-	}
-<<<<<<< HEAD
-
-=======
+	public GameObject obj;//playerを指定
 	
-	// Update is called once per frame
-	/*void FixedUpdate () {
-		// 
-		rigidbody2D.velocity = Vector2.up;
+	void Update() {
+		
+		LookAt2D (obj);
 	}
+	
+	void FixedUpdate(){
+		Move (obj);
+	}
+	
 	void Move(GameObject target) {
 		// (target.transform.position - transform.position)だけでは
 		// 距離によって移動速度が変わる
@@ -63,6 +32,5 @@ public class DrilEnemy : MonoBehaviour {
 		rotation.eulerAngles = new Vector3(0, 0, angle - 90);
 		// 回転
 		transform.rotation = rotation;
-	}*/
->>>>>>> testbranch
+	}
 }

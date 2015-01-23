@@ -4,18 +4,24 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	[SerializeField]
-	private GameObject result;
+	private GameObject gameOverObj;
 	private Result finish;
 
 	// 初期化
 	void Start () {
-		 finish = result.GetComponent<Result>();
+		 finish = gameOverObj.GetComponent<Result>();
+	}
+	
+	// 毎フレームごとに更新
+	void Update () {
+	
 	}
 
 	void OnTriggerEnter2D(Collider2D col){ // 衝突判定
 		if (col.gameObject.CompareTag("Enemy")) { // Enemyに当たったらゲームオーバーをTrueに
 			Destroy(col.gameObject);
-			//finish.GameOver();
+			Debug.Log("PlayerHit");
+			finish.GameOver();
 		}
 	}
 }
