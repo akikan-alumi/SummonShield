@@ -41,7 +41,7 @@ public class Result : MonoBehaviour {
 			tempScore = (int)(dateTime);
 			score = tempScore * addSpeed; 
 			nowScoreText.text = "score:" + score;
-			//Debug.Log (dateTime);
+			Debug.Log (dateTime);
 		}
 	}
 
@@ -53,7 +53,6 @@ public class Result : MonoBehaviour {
 		}
 		canvas.SetActive (false);
 		resultView.SetActive (true);
-		Time.timeScale = 0;
 		scoreText.text = "score:" + score;
 
 	}
