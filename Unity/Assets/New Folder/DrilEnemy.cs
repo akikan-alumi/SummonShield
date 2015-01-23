@@ -4,15 +4,15 @@ using System.Collections;
 public class DrilEnemy : MonoBehaviour {
 	[SerializeField]
 	private int Hp = 1;
-	[SerializeField]
-	public GameObject player;
-	[SerializeField]
+	//[SerializeField]
+	//public GameObject player;
+	/*[SerializeField]
 	private float speed = 1;
-	public GameObject obj;//playerを指定
+	public GameObject obj;//playerを指定*/
 	// Use this for initialization
 	void Start () {
-		LookAt2D(obj);
-		Move(obj);
+		//LookAt2D(obj);
+		//Move(obj);
 
 	}
 	private void OnTriggerEnter2D(Collider2D collision){
@@ -28,7 +28,7 @@ public class DrilEnemy : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	/*void FixedUpdate () {
 		// 
 		rigidbody2D.velocity = Vector2.up;
 	}
@@ -49,5 +49,5 @@ public class DrilEnemy : MonoBehaviour {
 		rotation.eulerAngles = new Vector3(0, 0, angle - 90);
 		// 回転
 		transform.rotation = rotation;
-	}
+	}*/
 }
