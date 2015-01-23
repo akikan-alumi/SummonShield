@@ -1119,7 +1119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda3a270c61b075419f38667d1120088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverObj: {fileID: 85623075}
 --- !u!212 &1892601357
 SpriteRenderer:
   m_ObjectHideFlags: 0
