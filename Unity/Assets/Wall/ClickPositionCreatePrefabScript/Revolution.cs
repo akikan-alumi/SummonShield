@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class Revolution : MonoBehaviour {
+
+	public int speed = 10;
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +12,6 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		rigidbody2D.velocity = transform.right.normalized * speed;
 	}
 }
