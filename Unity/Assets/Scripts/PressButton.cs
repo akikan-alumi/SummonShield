@@ -1,58 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// ボタンが押されたときの処理
+/// </summary>
 public class PressButton : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	/// <summary>
+	/// 一時停止時に表示するCanvasを設定
+	/// </summary>
+	[SerializeField]
+	private GameObject stopMenu;
+
+	/// <summary>
+	/// タイトル画面で,画面をタップする
+	/// </summary>
+	public void TapScreen(){
+		Debug.Log ("Tap Screen");
 	}
 
 	/// <summary>
-	/// [Easy]を押す
+	/// ボタンが押されたら一時停止するメソッド
 	/// </summary>
-	public void PressButtonEasy(){
-		Debug.Log ("Press Easy");
+	public void PressButtonStop(){
+		if (Time.timeScale != 0) {
+			
+			Time.timeScale = 0;
+			stopMenu.SetActive(true);
+			Debug.Log("Stop!");
+		
+		} else {
+			
+			Time.timeScale = 1;
+			stopMenu.SetActive(false);
+			Debug.Log("Start!");
+		
+		}
 	}
-	
+
 	/// <summary>
-	/// [Normal]を押す
+	/// TitleButtonが押されたらTITLESceneに移動する
 	/// </summary>
-	public void PressButtonNormal(){
-		Debug.Log ("Press Normal");
-		Application.LoadLevel("normalMode");
+	public void PressButtonTitle(){
+		Debug.Log ("Press Button Title");
 	}
-	
+
 	/// <summary>
-	/// [Hard]を押す
+	/// RetryButtonが押されたらScene再読み込み
 	/// </summary>
-	public void PressButtonHard(){
-		Debug.Log ("Press Hard");
-	}
-	
-	/// <summary>
-	/// [Credit]を押す
-	/// </summary>
-	public void PressButtonCredit(){
-		Debug.Log ("Press Credit");
-	}
-	
-	/// <summary>
-	/// [Ranking]を押す
-	/// </summary>
-	public void PressButtonRanking(){
-		Debug.Log ("Press Ranking");
-	}
-	
-	/// <summary>
-	/// [Option]を押す
-	/// </summary>
-	public void PressButtonOption(){
-		Debug.Log ("Press Option");
+	public void PressButtonRetry(){
+		Debug.Log ("Press Button Retry");
 	}
 }
