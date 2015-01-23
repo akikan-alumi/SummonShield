@@ -11,7 +11,8 @@ GameObject:
   - 212: {fileID: 21266066}
   - 114: {fileID: 11466068}
   - 114: {fileID: 11466066}
-  - 58: {fileID: 5866066}
+  - 114: {fileID: 11488594}
+  - 50: {fileID: 5088594}
   m_Layer: 0
   m_Name: Spawner2
   m_TagString: Spawner
@@ -26,22 +27,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166066}
   m_LocalRotation: {x: 0, y: 0, z: .961111367, w: -.276161164}
-  m_LocalPosition: {x: -5.71000004, y: 6.94999981, z: 0}
+  m_LocalPosition: {x: -5.6500001, y: 9.0199995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &5866066
-CircleCollider2D:
+--- !u!50 &5088594
+Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166066}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Radius: .0799999982
-  m_Center: {x: 0, y: 0}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!114 &11466066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSpace: 60
-  prefab: {fileID: 184096, guid: 5ecab05570194fb4ea0d2cbd0e34daa2, type: 2}
+  prefab: {fileID: 112862, guid: af0c248a64a14fc47a6ce1afd69a4e3a, type: 2}
 --- !u!114 &11466068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,6 +74,18 @@ MonoBehaviour:
   target: {fileID: 0}
   targetAngle: 90
   extraTargetAngle: 0
+--- !u!114 &11488594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6eab6c1d9db2d4eb832b858531cf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!212 &21266066
 SpriteRenderer:
   m_ObjectHideFlags: 1
