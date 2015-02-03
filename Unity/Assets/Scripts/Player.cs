@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){ // 衝突判定
 		if (col.gameObject.CompareTag("Enemy")) { // Enemyに当たったらゲームオーバーをTrueに
 			Destroy(col.gameObject);
-			//finish.GameOver();
+			finish.GameOver();
 		}
 	}
 }
