@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Wall
   - Spawner
+  - SoundManager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -45,6 +46,10 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: back
+    userID: 2
+    uniqueID: 427562919
     locked: 0
   - name: front
     userID: 1
