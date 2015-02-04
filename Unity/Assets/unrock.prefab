@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21247426}
   - 95: {fileID: 9547426}
   m_Layer: 0
-  m_Name: "\u30A2\u30F3\u30ED\u30C3\u30AF_0"
+  m_Name: unrock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
