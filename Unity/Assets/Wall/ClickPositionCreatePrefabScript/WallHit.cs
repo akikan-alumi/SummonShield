@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class WallHit : MonoBehaviour {
-
+	
 	public GameObject Prefab;
 	[SerializeField]
 	private float destroyTime = 5.0f;
