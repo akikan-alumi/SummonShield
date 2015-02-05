@@ -9,6 +9,8 @@ TagManager:
   - Wall
   - Spawner
   - SoundManager
+  - Circuit
+  - CircuitLight
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -50,6 +52,10 @@ TagManager:
   - name: back
     userID: 2
     uniqueID: 427562919
+    locked: 0
+  - name: MiddleBack
+    userID: 3
+    uniqueID: 2578873989
     locked: 0
   - name: front
     userID: 1
