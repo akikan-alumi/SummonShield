@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Efect : MonoBehaviour {
@@ -21,8 +21,6 @@ public class Efect : MonoBehaviour {
 						Instantiate (unrock, transform.position, transform.rotation);
 			}
 	}
-	
-	void OnAnimationFinish(){
-		Destroy (this.gameObject);
-	}
+
+
 }
