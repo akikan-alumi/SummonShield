@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Revolution : MonoBehaviour {
-	public int speed = 10;
+public class Revolution2 : MonoBehaviour {
+	public int speed = -10;
 	// Use this for initialization
 	void Start () {
 		
