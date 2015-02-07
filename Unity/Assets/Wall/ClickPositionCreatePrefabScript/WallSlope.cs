@@ -27,7 +27,7 @@ public class WallSlope : MonoBehaviour {
 		float angle = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg;
 		Quaternion rotation = new Quaternion();
 		// 回転角は右方向が0度なので-90
-		rotation.eulerAngles = new Vector3(0, 0, angle - 220);
+		rotation.eulerAngles = new Vector3(0, 0, angle + 90);
 		// 回転
 		transform.rotation = rotation;
 	}
