@@ -19,19 +19,26 @@ public class DrilEnemy : MonoBehaviour {
 	}
 	private void OnTriggerEnter2D(Collider2D collision){
 		if (collision.gameObject.CompareTag ("Wall")) {
-            Hp--;
-			if (Hp < 1) {
-				Destroy (this.gameObject);
-				Debug.Log ("PlayerHit");
-		
-			}else if(Hp == 1){
-                foreach (Transform t in this.transform) {
-                    Destroy(t.gameObject);
-                }
-			}
+
+			
 		}
 	}
-	
+
+    public void test() {
+
+    }
+    public void setHP() {
+        Hp--;
+        if (Hp < 1) {
+            Destroy(this.gameObject);
+            Debug.Log("PlayerHit");
+
+        } else if (Hp == 1) {
+            foreach (Transform t in this.transform) {
+                Destroy(t.gameObject);
+            }
+        }
+    }
 	// Update is called once per frame
 	/*void FixedUpdate () {
 		// 
