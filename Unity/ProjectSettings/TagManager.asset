@@ -57,6 +57,10 @@ TagManager:
     userID: 3
     uniqueID: 2578873989
     locked: 0
+  - name: MiddleFront
+    userID: 4
+    uniqueID: 4146131755
+    locked: 0
   - name: front
     userID: 1
     uniqueID: 57825207
