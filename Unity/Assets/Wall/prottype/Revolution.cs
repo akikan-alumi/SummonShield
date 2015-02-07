@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Revolution : MonoBehaviour {
-	public int speed = 10;
+	[SerializeField]
+	private int speed = 10;
 	// Use this for initialization
 	void Start () {
 		
