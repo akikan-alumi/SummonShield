@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class DrilEnemy : MonoBehaviour {
-	[SerializeField]
-	private int Hp = 1;
+    [SerializeField]
+    private int Hp = 2;
+
+    public GameObject enemySield;
 	//[SerializeField]
 	//public GameObject player;
 	/*[SerializeField]
@@ -13,16 +15,19 @@ public class DrilEnemy : MonoBehaviour {
 	void Start () {
 		//LookAt2D(obj);
 		//Move(obj);
-
+        
 	}
 	private void OnTriggerEnter2D(Collider2D collision){
 		if (collision.gameObject.CompareTag ("Wall")) {
+            Hp--;
 			if (Hp < 1) {
 				Destroy (this.gameObject);
 				Debug.Log ("PlayerHit");
 		
-			}else{
-				Hp--;
+			}else if(Hp == 1){
+                foreach (Transform t in this.transform) {
+                    Destroy(t.gameObject);
+                }
 			}
 		}
 	}
