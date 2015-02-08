@@ -52270,7 +52270,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 57825207
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: e735d40def984c64f840b1aecec4027d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -55738,6 +55738,10 @@ Prefab:
       propertyPath: gameOverObj
       value: 
       objectReference: {fileID: 85623075}
+    - target: {fileID: 21200000, guid: 140ae0a8d4f28ae4c9ec6163bfbf1b53, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 57825207
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6500000, guid: 140ae0a8d4f28ae4c9ec6163bfbf1b53, type: 2}
     - {fileID: 5400000, guid: 140ae0a8d4f28ae4c9ec6163bfbf1b53, type: 2}

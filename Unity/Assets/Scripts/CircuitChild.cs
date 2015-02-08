@@ -43,7 +43,6 @@ public class CircuitChild : CircuitParent {
 			foreach(SpriteRenderer spr in childSpRenderer){
 				spr.enabled = true;
 			}
-			Debug.Log("内側！");
 		}
 	}
 }
