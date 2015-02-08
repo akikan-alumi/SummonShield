@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class lookat2D : MonoBehaviour {
     [SerializeField]
 	private float speed = 1;
-    public GameObject obj;//playerを指定
+	//playerを指定
+	[SerializeField]
+	private GameObject obj;
 
+	//public CircuitChild  cChild;
+	//public CircuitParent cParent;
+	
+	//private GameObject circuit
     void Update() {
 
 		LookAt2D (obj);
@@ -33,4 +40,22 @@ public class lookat2D : MonoBehaviour {
         // 回転
         transform.rotation = rotation;
     }
+
+	/*void OnDestroy(){
+		if (cChild != null) {
+			cChild.EnabledSwitch (true);
+		}
+		if (cParent != null){
+			cParent.EnabledSwitch (true);
+		}
+	}
+	void OnTriggerEnter2D(Collider2D col){
+		if (col.gameObject.CompareTag ("Circuit")) {
+			if(col.gameObject.GetComponent<CircuitChild>() != null){
+				cChild = col.gameObject.GetComponent<CircuitChild>();
+			} else if(col.gameObject.GetComponent<CircuitParent>() != null){
+				cParent = col.gameObject.GetComponent<CircuitParent>();
+			}
+		}
+	}*/
 }

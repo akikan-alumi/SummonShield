@@ -25,11 +25,6 @@ public class CircuitLight : MonoBehaviour {
 
 	private void Draw()
 	{
-		if (parentSpRenderer.enabled != true) 
-		{
-			this.spRenderer.enabled = false;
-		}else {
-			this.spRenderer.enabled = true;
-		}
+		this.spRenderer.color = parentSpRenderer.color;
 	}
 }
