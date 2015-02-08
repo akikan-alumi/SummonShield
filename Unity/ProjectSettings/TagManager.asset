@@ -21,7 +21,7 @@ TagManager:
   Builtin Layer 6: 
   Builtin Layer 7: 
   User Layer 8: Front
-  User Layer 9: 
+  User Layer 9: Front2
   User Layer 10: 
   User Layer 11: 
   User Layer 12: 
@@ -64,4 +64,8 @@ TagManager:
   - name: front
     userID: 1
     uniqueID: 57825207
+    locked: 0
+  - name: front2
+    userID: 2
+    uniqueID: 640646463
     locked: 0

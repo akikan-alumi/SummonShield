@@ -20,8 +20,10 @@ public class WallHit : MonoBehaviour {
 			Debug.Log ("PlayerHit");
 		}
         if (collision.gameObject.CompareTag("Enemy")) {
+            DrilEnemy de = collision.GetComponent<DrilEnemy>();
+            de.setHP();
             Destroy(this.gameObject);
-			Destroy(collision.gameObject);
+			//Destroy(collision.gameObject);
             Debug.Log("EnemyHit");
         }
 
