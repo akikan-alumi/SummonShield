@@ -4799,6 +4799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 60
   prefab: {fileID: 110954, guid: e123e76a107dbf746bdce7b177c362fc, type: 2}
+  startTime: 0
 --- !u!114 &204498572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14645,6 +14646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 60
   prefab: {fileID: 110954, guid: e123e76a107dbf746bdce7b177c362fc, type: 2}
+  startTime: 0
 --- !u!114 &549231095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44691,6 +44693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 60
   prefab: {fileID: 110954, guid: e123e76a107dbf746bdce7b177c362fc, type: 2}
+  startTime: 0
 --- !u!114 &1586768022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52002,6 +52005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 60
   prefab: {fileID: 110954, guid: e123e76a107dbf746bdce7b177c362fc, type: 2}
+  startTime: 0
 --- !u!114 &1846300397
 MonoBehaviour:
   m_ObjectHideFlags: 0
