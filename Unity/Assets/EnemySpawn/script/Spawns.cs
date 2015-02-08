@@ -6,7 +6,7 @@ public class Spawns : MonoBehaviour {
 
 	private int count = 0;
 	[SerializeField]
-	private int spawnSpace;
+	private int spawnSpace = 60;
 	[SerializeField]
 	private GameObject prefab;
 	[SerializeField]
