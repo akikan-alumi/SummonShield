@@ -2,56 +2,57 @@
 using System.Collections;
 
 public class CircuitParent : MonoBehaviour {
-	
-	//このオブジェクトのSpriteRendererコンポーネント
+
+	//このオブジェクトのSpriteRenderer
 	protected SpriteRenderer spRenderer;
+
 	//この回路オブジェクトより下の階層にある全てのSpriteRendererコンポーネント
 	protected SpriteRenderer[] childSpRenderer;
 
-	//敵と触れているフラグ--------------------------------------------------------------
-	private bool enemyHitFlag = false;	
-	// Use this for initialization
+	//画像のα値
+	protected float alpha = 1;
+
+	protected float fadeInSpeed = 4.0f;
+	protected float fadeOutSpeed = 10.0f;
+
 	void Awake() {
-		
+
 		//このオブジェクトのSpriteRendererを取得
 		spRenderer = GetComponent<SpriteRenderer> ();
-		
+		//この回路に対応した光オブジェクトを取得
+		//childFlash = gameObject.transform.Find("CircuitLight");
+
+		//この回路に対応した光オブジェクトのSpriteRendererコンポーネントを取得
+		//flash = childFlash.GetComponent<SpriteRenderer>();
+
 		//この回路オブジェクトより下の階層にある全てのSpriteRendererコンポーネントを取得
 		childSpRenderer = GetComponentsInChildren <SpriteRenderer>();
 	}
 
-	//エネミーと接触している間実行される　描画OFF処理
+	void Update(){
+		FadeIn ();
+		ChangeTransparency (alpha);
+	}
+
+	protected void FadeIn(){
+		alpha += Time.deltaTime * fadeInSpeed;
+		if(alpha >= 1)alpha = 1;
+	}
+
+	protected void ChangeTransparency (float alpha) 
+	{
+		//回路を徐々に透過する
+		this.spRenderer.color = new Color(1, 1, 1, alpha);
+
+		//青い光も合わせて透過する
+		//flash.color = new Color(1, 1, 1, alpha);
+	}
+
 	void OnTriggerStay2D(Collider2D col){
-		if (col.gameObject.CompareTag ("Enemy")) {
-			foreach(SpriteRenderer s in childSpRenderer){
-				//回路の描画をOFFにする
-				s.enabled = false;
-			} 
-		}
-	}
-	
-	//エネミーと接触しなくなった時に実行される 描画ON処理
-	void OnTriggerExit2D(Collider2D col){
-
-		if (col.gameObject.CompareTag ("Enemy") ) {
-			//回路の描画再開
-			foreach(SpriteRenderer spr in childSpRenderer){
-				spr.enabled = true;
-				Debug.Log("In OnTriggerEnter2D");
-
-			}
-		}
-	}
-
-	/// <summary>
-	/// エネミー側で回路描画をオンにするメソッド
-	/// </summary>
-	/// <param name="enabledSwitch">スイッチ<c>true</c>回路描画</param>
-	public void EnabledSwitch(bool enabledSwitch){
-		if(enabledSwitch){
-			foreach(SpriteRenderer spr in childSpRenderer){
-				spr.enabled = true;
-			}
+		if (col.gameObject.CompareTag ("Enemy")){
+			//α値を徐々に下げる
+			alpha -= Time.deltaTime * fadeOutSpeed;
+			if(alpha < 0)alpha = 0;
 		}
 	}
 }
