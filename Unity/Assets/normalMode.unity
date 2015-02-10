@@ -36299,6 +36299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!1001 &1281333489
 Prefab:
   m_ObjectHideFlags: 0
@@ -47470,6 +47471,7 @@ GameObject:
   - 4: {fileID: 1657622615}
   - 212: {fileID: 1657622617}
   - 58: {fileID: 1657622616}
+  - 114: {fileID: 1657622618}
   m_Layer: 0
   m_Name: BossEnemy2
   m_TagString: Untagged
@@ -47524,6 +47526,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 162b441a8a17f5b4f9afae44a7872e53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1657622618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657622614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!1001 &1658067446
 Prefab:
   m_ObjectHideFlags: 0
@@ -52609,6 +52623,7 @@ GameObject:
   - 4: {fileID: 1837854397}
   - 212: {fileID: 1837854399}
   - 58: {fileID: 1837854398}
+  - 114: {fileID: 1837854400}
   m_Layer: 0
   m_Name: BossEnemy4
   m_TagString: Untagged
@@ -52663,6 +52678,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d6230f949038164181c65154eaab029, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1837854400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837854396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!1 &1837940195
 GameObject:
   m_ObjectHideFlags: 0
@@ -53909,6 +53936,7 @@ GameObject:
   - 4: {fileID: 1867188040}
   - 212: {fileID: 1867188039}
   - 58: {fileID: 1867188038}
+  - 114: {fileID: 1867188041}
   m_Layer: 0
   m_Name: BossEnemy3
   m_TagString: Untagged
@@ -53963,6 +53991,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930627557}
   m_RootOrder: 1
+--- !u!114 &1867188041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867188037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!1 &1868508784
 GameObject:
   m_ObjectHideFlags: 0
