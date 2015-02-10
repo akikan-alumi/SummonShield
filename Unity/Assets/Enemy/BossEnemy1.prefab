@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 444592}
   - 212: {fileID: 21244592}
   - 58: {fileID: 5844592}
+  - 114: {fileID: 11436550}
   m_Layer: 0
   m_Name: BossEnemy4
   m_TagString: Untagged
@@ -27,6 +28,7 @@ GameObject:
   - 4: {fileID: 444594}
   - 212: {fileID: 21244594}
   - 58: {fileID: 5844594}
+  - 114: {fileID: 11444966}
   m_Layer: 0
   m_Name: BossEnemy3
   m_TagString: Untagged
@@ -44,6 +46,7 @@ GameObject:
   - 4: {fileID: 444596}
   - 212: {fileID: 21244596}
   - 58: {fileID: 5844596}
+  - 114: {fileID: 11425604}
   m_Layer: 0
   m_Name: BossEnemy2
   m_TagString: Untagged
@@ -180,6 +183,30 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .649999976
   m_Center: {x: 0, y: 0}
+--- !u!114 &11425604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
+--- !u!114 &11436550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!114 &11444592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,6 +223,18 @@ MonoBehaviour:
   - {fileID: 144596}
   - {fileID: 144594}
   - {fileID: 144592}
+--- !u!114 &11444966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!212 &21244592
 SpriteRenderer:
   m_ObjectHideFlags: 1
