@@ -63,6 +63,7 @@ GameObject:
   - 58: {fileID: 5844598}
   - 50: {fileID: 5044592}
   - 114: {fileID: 11444592}
+  - 114: {fileID: 11463682}
   m_Layer: 0
   m_Name: BossEnemy1
   m_TagString: Untagged
@@ -196,6 +197,19 @@ MonoBehaviour:
   - {fileID: 144596}
   - {fileID: 144594}
   - {fileID: 144592}
+--- !u!114 &11463682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2330e7ce7564b4e8ef7056cb711626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  obj: {fileID: 150372, guid: 140ae0a8d4f28ae4c9ec6163bfbf1b53, type: 2}
 --- !u!212 &21244592
 SpriteRenderer:
   m_ObjectHideFlags: 1
