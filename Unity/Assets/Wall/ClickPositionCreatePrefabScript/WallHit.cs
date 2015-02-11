@@ -20,10 +20,20 @@ public class WallHit : MonoBehaviour {
 			Debug.Log ("PlayerHit");
 		}
         if (collision.gameObject.CompareTag("Enemy")) {
-            DrilEnemy de = collision.GetComponent<DrilEnemy>();
-            de.setHP();
+            if (collision.GetComponent<DrilEnemy>()) {
+                DrilEnemy enemy = collision.GetComponent<DrilEnemy>();
+                enemy.setHP();
+
+            }else if (collision.GetComponent<BossEnemy>()) {
+                BossEnemy enemy = collision.GetComponent<BossEnemy>();
+                enemy.setHP();
+
+            }else if (collision.GetComponent<SpeedEnemy>()) {
+                SpeedEnemy enemy = collision.GetComponent<SpeedEnemy>();
+                enemy.setHP();
+
+            }
             Destroy(this.gameObject);
-			//Destroy(collision.gameObject);
             Debug.Log("EnemyHit");
         }
 

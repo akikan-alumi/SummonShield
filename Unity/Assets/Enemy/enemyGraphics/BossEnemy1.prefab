@@ -10,9 +10,10 @@ GameObject:
   - 4: {fileID: 444592}
   - 212: {fileID: 21244592}
   - 58: {fileID: 5844592}
+  - 114: {fileID: 11458316}
   m_Layer: 0
   m_Name: BossEnemy4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,9 +28,10 @@ GameObject:
   - 4: {fileID: 444594}
   - 212: {fileID: 21244594}
   - 58: {fileID: 5844594}
+  - 114: {fileID: 11450816}
   m_Layer: 0
   m_Name: BossEnemy3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,9 +46,10 @@ GameObject:
   - 4: {fileID: 444596}
   - 212: {fileID: 21244596}
   - 58: {fileID: 5844596}
+  - 114: {fileID: 11471156}
   m_Layer: 0
   m_Name: BossEnemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +69,7 @@ GameObject:
   - 114: {fileID: 11463682}
   m_Layer: 0
   m_Name: BossEnemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.19000006, z: 0}
+  m_LocalPosition: {x: 6.07488346, y: 11.7441149, z: 0}
   m_LocalScale: {x: 2.5999999, y: 2.5999999, z: 2.5999999}
   m_Children:
   - {fileID: 444596}
@@ -145,7 +148,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 144592}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 1.83000004
   m_Center: {x: 0, y: 0}
 --- !u!58 &5844594
@@ -156,7 +159,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 144594}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 1.28999996
   m_Center: {x: 0, y: 0}
 --- !u!58 &5844596
@@ -167,7 +170,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 144596}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: 1.00999999
   m_Center: {x: 0, y: 0}
 --- !u!58 &5844598
@@ -178,7 +181,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 144598}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Radius: .649999976
   m_Center: {x: 0, y: 0}
 --- !u!114 &11444592
@@ -197,6 +200,30 @@ MonoBehaviour:
   - {fileID: 144596}
   - {fileID: 144594}
   - {fileID: 144592}
+--- !u!114 &11450816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
+--- !u!114 &11458316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!114 &11463682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,7 +236,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  obj: {fileID: 150372, guid: 140ae0a8d4f28ae4c9ec6163bfbf1b53, type: 2}
+  obj: {fileID: 117312, guid: b2abb716d6c893a49b9c263c8bd15f37, type: 2}
+--- !u!114 &11471156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e6dee74220f2c45b1513a78c87a7b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rnd: 0
 --- !u!212 &21244592
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -228,7 +267,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 640646463
+  m_SortingLayerID: 57825207
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d6230f949038164181c65154eaab029, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -250,7 +289,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 640646463
+  m_SortingLayerID: 57825207
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d81343d7acdd34d47acb364b58f13d4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -272,7 +311,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 640646463
+  m_SortingLayerID: 57825207
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 162b441a8a17f5b4f9afae44a7872e53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -294,7 +333,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 640646463
+  m_SortingLayerID: 57825207
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ce428e77921030549a3912389c1e9dc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
