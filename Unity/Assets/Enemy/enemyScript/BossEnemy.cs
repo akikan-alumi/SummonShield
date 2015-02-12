@@ -7,6 +7,15 @@ public class BossEnemy : MonoBehaviour {
     [SerializeField]
     private CircleCollider2D rad;
     public GameObject[] enemySield = new GameObject[3];
+	[SerializeField]
+	private GameObject kairo;
+	private CircuitSwitch cirSwi;
+
+	void Awake(){
+		kairo = GameObject.Find ("CircuitSwitch").gameObject;
+		cirSwi = kairo.GetComponent<CircuitSwitch>();
+
+	}
 
     void Start() {
         rad = GetComponent<CircleCollider2D>();
@@ -14,6 +23,7 @@ public class BossEnemy : MonoBehaviour {
         enemySield[0] = transform.FindChild("BossEnemy2").gameObject;
         enemySield[1] = transform.FindChild("BossEnemy3").gameObject;
         enemySield[2] = transform.FindChild("BossEnemy4").gameObject;
+		cirSwi.CSwitch ();
     }
 
     public void setHP() {
@@ -33,4 +43,9 @@ public class BossEnemy : MonoBehaviour {
             rad.radius = 1.28f;
         }
     }
+
+	//ボス撃破でCSwitch起動
+	void OnDestroy(){
+		cirSwi.CSwitch();
+	}
 }
