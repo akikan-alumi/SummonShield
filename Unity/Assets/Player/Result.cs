@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class Result : MonoBehaviour {
 
 	// 初期値セット
-	private int score = 0;
-	private int tempScore = 0;
-	private float dateTime = 0;
+	private float score = 0f;
+	private float tempScore = 0f;
+	private float dateTime = 0f;
 	[SerializeField] 
 	private GameObject resultView;
 	[SerializeField]
@@ -19,10 +19,10 @@ public class Result : MonoBehaviour {
 	private Text nowScoreText;
 	private Text scoreText;
 	[SerializeField]
-	private int addSpeed = 128;
+	private float addSpeed = 0.125f;
 	private GameObject[] spawners;
 	private bool gameOver;
-
+	private string strScore;
 
 	void Start ()
 	{
@@ -38,9 +38,10 @@ public class Result : MonoBehaviour {
 	{
 		if(gameOver == false){
 			dateTime += Time.deltaTime;
-			tempScore = (int)(dateTime);
+			tempScore = dateTime;
 			score = tempScore * addSpeed; 
-			nowScoreText.text = /*"score:"*/"" + score;
+			strScore = score.ToString("F3");
+			nowScoreText.text = /*"score:"*/"" + strScore;
 			//Debug.Log (dateTime);
 		}
 	}
@@ -54,7 +55,7 @@ public class Result : MonoBehaviour {
 		canvas.SetActive (false);
 		resultView.SetActive (true);
 		Time.timeScale = 0;
-		scoreText.text = "score:" + score;
+		scoreText.text = "score:" + strScore;
 
 	}
 
