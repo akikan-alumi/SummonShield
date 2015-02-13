@@ -29,8 +29,11 @@ public class BossEnemy : MonoBehaviour {
     public void setHP() {
         Hp--;
         if (Hp < 1) {
+			//ボス撃破でCSwitch起動
+			cirSwi.CSwitch();
             Destroy(this.gameObject);
             Debug.Log("PlayerHit");
+
 
         }else if (Hp == 2) {
             Destroy(enemySield[0].gameObject);
@@ -44,8 +47,6 @@ public class BossEnemy : MonoBehaviour {
         }
     }
 
-	//ボス撃破でCSwitch起動
-	void OnDestroy(){
-		cirSwi.CSwitch();
-	}
+
+
 }
