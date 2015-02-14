@@ -40,7 +40,9 @@ public class lookat2D : MonoBehaviour {
         // 回転
         transform.rotation = rotation;
     }
-
+    public void setSpeed() {
+        speed = 0;
+    }
 	/*void OnDestroy(){
 		if (cChild != null) {
 			cChild.EnabledSwitch (true);

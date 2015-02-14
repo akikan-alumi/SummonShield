@@ -57,6 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 60
   prefab: {fileID: 184096, guid: 5ecab05570194fb4ea0d2cbd0e34daa2, type: 2}
+  startTime: 0
 --- !u!212 &21218576
 SpriteRenderer:
   m_ObjectHideFlags: 1

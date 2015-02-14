@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 60
   prefab: {fileID: 112862, guid: af0c248a64a14fc47a6ce1afd69a4e3a, type: 2}
+  startTime: 0
 --- !u!114 &11466068
 MonoBehaviour:
   m_ObjectHideFlags: 1

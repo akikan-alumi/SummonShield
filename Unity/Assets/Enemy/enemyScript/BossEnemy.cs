@@ -10,7 +10,9 @@ public class BossEnemy : MonoBehaviour {
 	[SerializeField]
 	private GameObject kairo;
 	private CircuitSwitch cirSwi;
-
+    private Animator myAnim;
+    private lookat2D speedAccessScript;
+    private bool deadSwitch;
 	void Awake(){
 		kairo = GameObject.Find ("CircuitSwitch").gameObject;
 		cirSwi = kairo.GetComponent<CircuitSwitch>();
@@ -24,14 +26,19 @@ public class BossEnemy : MonoBehaviour {
         enemySield[1] = transform.FindChild("BossEnemy3").gameObject;
         enemySield[2] = transform.FindChild("BossEnemy4").gameObject;
 		cirSwi.CSwitch ();
+        speedAccessScript = this.GetComponent<lookat2D>();
+        myAnim = this.GetComponent<Animator>();
+        deadSwitch = false;
     }
 
-    public void setHP() {
+    public void setHP() {//HPに応じてコライダー２Dの範囲を減らしていく
         Hp--;
         if (Hp < 1) {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,5f);
             Debug.Log("PlayerHit");
-
+            speedAccessScript.setSpeed();
+            rad.radius = 0.01f;
+            deathAnim();
         }else if (Hp == 2) {
             Destroy(enemySield[0].gameObject);
             rad.radius = 0.65f;
@@ -48,4 +55,7 @@ public class BossEnemy : MonoBehaviour {
 	void OnDestroy(){
 		cirSwi.CSwitch();
 	}
+    void deathAnim() {
+        myAnim.SetBool("dead", true);
+    }
 }
