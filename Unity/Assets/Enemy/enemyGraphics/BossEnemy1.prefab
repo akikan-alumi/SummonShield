@@ -68,6 +68,7 @@ GameObject:
   - 114: {fileID: 11444592}
   - 114: {fileID: 11463682}
   - 111: {fileID: 11133430}
+  - 95: {fileID: 9591420}
   m_Layer: 0
   m_Name: BossEnemy1
   m_TagString: Enemy
@@ -185,6 +186,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: .649999976
   m_Center: {x: 0, y: 0}
+--- !u!95 &9591420
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144598}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 811b80d4bbb18d34fbe32aff165e0df6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!111 &11133430
 Animation:
   m_ObjectHideFlags: 1
