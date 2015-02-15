@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnSpace: 3600
   prefab: {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
-  startTime: 10
+  startTime: 60
 --- !u!114 &11417298
 MonoBehaviour:
   m_ObjectHideFlags: 1
