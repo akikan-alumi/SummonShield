@@ -40,7 +40,7 @@ public class Result : MonoBehaviour {
 			dateTime += Time.deltaTime;
 			tempScore = dateTime;
 			score = tempScore * addSpeed; 
-			strScore = score.ToString("F3");
+			strScore = score.ToString("F0");
 			nowScoreText.text = /*"score:"*/"" + strScore;
 			//Debug.Log (dateTime);
 		}
