@@ -8,19 +8,28 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 	[SerializeField]
 	private int spawnMax = 5;
 
+	public int SpawnMax{
+		get{return spawnMax;}
+	}
+
+	/// <summary>
+	/// ステージにいるwallの数を記録する
+	/// </summary>
+	public GameObject[] targets;
+
 	// クリックした位置座標
 	private Vector3 clickPosition;
 	// Use this for initialization
 	//float time = 0.0f;
 	void Start () {
-
-		Debug.Log (Prefab);
+		targets = GameObject.FindGameObjectsWithTag("Wall");
+		//Debug.Log (Prefab);
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject[] targets = GameObject.FindGameObjectsWithTag("Wall");
+		targets = GameObject.FindGameObjectsWithTag("Wall");
 	
 		if( targets.Length < spawnMax){
 			// マウス入力で左クリックをした瞬間
