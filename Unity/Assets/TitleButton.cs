@@ -30,7 +30,7 @@ public class TitleButton : MonoBehaviour {
 	public void TapNormal()
 	{
 		//シーン遷移
-
+        Application.LoadLevel(1);
 		Debug.Log ("TapNormalButton");
 	}
 
@@ -40,7 +40,7 @@ public class TitleButton : MonoBehaviour {
 	public void TapHard()
 	{
 		//シーン遷移
-		
+        Application.LoadLevel(2);
 		Debug.Log ("TapHardButton");
 	}
 
@@ -50,7 +50,7 @@ public class TitleButton : MonoBehaviour {
 	public void TapHell()
 	{
 		//シーン遷移
-		
+        Application.LoadLevel(3);
 		Debug.Log ("TapHellButton");
 	}
 }

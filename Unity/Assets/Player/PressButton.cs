@@ -43,6 +43,7 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonTitle(){
 		Debug.Log ("Press Button Title");
+        Application.LoadLevel(0);
 	}
 
 	/// <summary>
@@ -50,5 +51,14 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonRetry(){
 		Debug.Log ("Press Button Retry");
+        if (Application.loadedLevelName == "normalMode") {
+            Application.LoadLevel(1);
+        }
+        if (Application.loadedLevelName == "hardMode") {
+            Application.LoadLevel(2);
+        }
+        if (Application.loadedLevelName == "Hell") {
+            Application.LoadLevel(3);
+        }
 	}
 }
