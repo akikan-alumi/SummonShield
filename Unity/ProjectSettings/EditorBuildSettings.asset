@@ -4,4 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/titleScene.unity
+  - enabled: 1
+    path: Assets/normalMode.unity
+  - enabled: 1
+    path: Assets/hardMode.unity
+  - enabled: 1
+    path: Assets/Hell.unity
