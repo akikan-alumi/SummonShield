@@ -58,6 +58,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.20000005
   m_Center: {x: 0, y: 0}
+--- !u!95 &9560314
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fefdf6835616b5438d83f219311406c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11447216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +118,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 57825207
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: af7d7e84266b8144dab6d5813675a634, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c83e5a6221c7d849941aebffee1da33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
