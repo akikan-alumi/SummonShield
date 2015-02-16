@@ -43,16 +43,26 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonTitle(){
 		Debug.Log ("Press Button Title");
-        Application.LoadLevel(0);
+		Application.LoadLevel("titleScene");
 	}
+
+
 
 	/// <summary>
 	/// RetryButtonが押されたらScene再読み込み
 	/// </summary>
+	///
+	public void PressButtonRetry(){
+		Debug.Log ("Press Button Title");
+		Time.timeScale = 1.0f;
+		Application.LoadLevel("normalMode");
+	}
+
+	/*
 	public void PressButtonRetry(){
 		Debug.Log ("Press Button Retry");
         if (Application.loadedLevelName == "normalMode") {
-            Application.LoadLevel(1);
+			Application.LoadLevel("normalMode");
         }
         if (Application.loadedLevelName == "hardMode") {
             Application.LoadLevel(2);
@@ -61,4 +71,5 @@ public class PressButton : MonoBehaviour {
             Application.LoadLevel(3);
         }
 	}
+	*/
 }
