@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Result : MonoBehaviour {
-
+	
 	// 初期値セット
 	private float score = 0f;
 	private float tempScore = 0f;
@@ -23,15 +23,20 @@ public class Result : MonoBehaviour {
 	private GameObject[] spawners;
 	private bool gameOver;
 	private string strScore;
-
+	private static float highScore;
+	
+	void awake(){
+		highScore = PlayerPrefs.GetFloat ("highScore");
+	}	
+	
 	void Start ()
 	{
 		scoreText = scoreTextObj.GetComponent<Text> ();
 		nowScoreText = nowScoreTextObj.GetComponent<Text> ();
 		gameOver = false;
 		spawners  = GameObject.FindGameObjectsWithTag("Spawner");
-
-
+		
+		
 	}
 	
 	void Update ()
@@ -45,7 +50,7 @@ public class Result : MonoBehaviour {
 			//Debug.Log (dateTime);
 		}
 	}
-
+	
 	public void GameOver()
 	{
 		gameOver = true;
@@ -56,7 +61,10 @@ public class Result : MonoBehaviour {
 		resultView.SetActive (true);
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
-
+		if((highScore < score) || (highScore == null)){
+			highScore = score;
+			PlayerPrefs.SetFloat("highScore",highScore);
+			
+		}
 	}
-
 }
