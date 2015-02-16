@@ -43,7 +43,7 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonTitle(){
 		Debug.Log ("Press Button Title");
-        Application.LoadLevel(0);
+		Application.LoadLevel("titleScene");
 	}
 
 	/// <summary>
