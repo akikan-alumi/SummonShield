@@ -14,6 +14,9 @@ public class BossEnemy : MonoBehaviour {
     private lookat2D speedAccessScript;
     private bool deadSwitch;
     private BGM bgm;
+    public GameObject explosion;
+
+    private int ExproAnimCount = 0;
 	void Awake(){
 		kairo = GameObject.Find ("CircuitSwitch").gameObject;
 		cirSwi = kairo.GetComponent<CircuitSwitch>();
@@ -62,5 +65,17 @@ public class BossEnemy : MonoBehaviour {
     void deathAnim() {
         myAnim.SetBool("dead", true);
         cirSwi.CSwitch();
+    }
+
+    void Update() {
+        if (Hp < 1) {
+            ExproAnimCount++;
+            if (ExproAnimCount >= 10) {
+                float rnd1 = Random.Range(-1.3f,1.3f);
+                float rnd2 = Random.Range(-1.3f, 1.3f);
+                Instantiate(explosion,new Vector3(rnd1,rnd2,0),Quaternion.identity);
+                ExproAnimCount = 0;
+            }
+        }
     }
 }
