@@ -3,6 +3,7 @@ using System.Collections;
 
 public class TitleButton : MonoBehaviour {
 	public GameObject CreditText;
+    public GameObject NormalModeButton;
 	bool TriggerSwitch = false;
 
 	/// <summary>
@@ -16,11 +17,17 @@ public class TitleButton : MonoBehaviour {
 			CreditText.SetActive(true); 
 			TriggerSwitch = true;
 			Debug.Log ("ON");
+
+            //クレジット開いたまま別シーンに移動させないコード
+            NormalModeButton.SetActive(false);
 		}else if(TriggerSwitch == true){
 			// Trigger OFF 
 			CreditText.SetActive(false); 
 			TriggerSwitch = false;
 			Debug.Log ("OFF");
+
+            //クレジット閉じていたら別シーンに移動させることが出来るコード
+            NormalModeButton.SetActive(true);
 		}
 	}
 
