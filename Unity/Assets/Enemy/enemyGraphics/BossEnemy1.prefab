@@ -212,7 +212,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 1d8b5efde4d53b948b36b6da2d740b54, type: 2}
   m_Animations: []
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &11444592
@@ -233,6 +233,7 @@ MonoBehaviour:
   - {fileID: 144594}
   - {fileID: 144592}
   kairo: {fileID: 0}
+  explosion: {fileID: 132372, guid: a188733c6e68d6441a44c06bd5b1a30e, type: 2}
 --- !u!114 &11450816
 MonoBehaviour:
   m_ObjectHideFlags: 1

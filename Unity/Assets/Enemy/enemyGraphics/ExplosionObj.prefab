@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 432372}
   - 95: {fileID: 9504372}
   - 212: {fileID: 21236656}
+  - 111: {fileID: 11162524}
+  - 114: {fileID: 11495352}
   - 111: {fileID: 11166424}
   - 111: {fileID: 11195778}
   m_Layer: 0
@@ -46,9 +48,23 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &11166424
+--- !u!111 &11162524
 Animation:
   m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132372}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e36fa914376aa444c8087a69f1b75b67, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &11166424
+Animation:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132372}
@@ -74,6 +90,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11495352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f753be2e236d4e4fbdf77ee8b016b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21236656
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -92,7 +119,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 863878949
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d635dea7188343b4293c5d30255c473d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
