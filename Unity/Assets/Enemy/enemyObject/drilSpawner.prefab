@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd2394f41ed7f749a1c75257d55c302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 425984, guid: b2abb716d6c893a49b9c263c8bd15f37, type: 2}
+  target: {fileID: 479018, guid: b2abb716d6c893a49b9c263c8bd15f37, type: 2}
   targetAngle: 90
   extraTargetAngle: 0
 --- !u!114 &11499340
