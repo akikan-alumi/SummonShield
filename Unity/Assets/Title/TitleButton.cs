@@ -36,6 +36,7 @@ public class TitleButton : MonoBehaviour {
 	/// </summary>
 	public void TapNormal()
 	{
+        SoundManager.Instance.PlaySE(0);
 		//シーン遷移
         Application.LoadLevel(1);
 		Debug.Log ("TapNormalButton");
