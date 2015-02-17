@@ -6,6 +6,7 @@ public class WallSlope : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		LookAt2D(obj);
+        SoundManager.Instance.PlaySE(2);
 	}
 
 

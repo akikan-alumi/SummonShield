@@ -17,9 +17,10 @@ public class Efect : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) {
-				if (collision.gameObject.CompareTag ("Enemy")) {
-						Instantiate (unrock, transform.position, transform.rotation);
-			}
+		if (collision.gameObject.CompareTag ("Enemy")) {
+			Instantiate (unrock, transform.position, transform.rotation);
+            SoundManager.Instance.PlaySE(1);
+	    }
 	}
 
 

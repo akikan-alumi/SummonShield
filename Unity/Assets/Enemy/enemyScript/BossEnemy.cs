@@ -13,10 +13,11 @@ public class BossEnemy : MonoBehaviour {
     private Animator myAnim;
     private lookat2D speedAccessScript;
     private bool deadSwitch;
+    private BGM bgm;
 	void Awake(){
 		kairo = GameObject.Find ("CircuitSwitch").gameObject;
 		cirSwi = kairo.GetComponent<CircuitSwitch>();
-
+        bgm = GameObject.Find("BGMobject").GetComponent<BGM>();
 	}
 
     void Start() {
@@ -29,6 +30,7 @@ public class BossEnemy : MonoBehaviour {
         speedAccessScript = this.GetComponent<lookat2D>();
         myAnim = this.GetComponent<Animator>();
         deadSwitch = false;
+        bgm.SetBOSSBGM();
     }
 
     public void setHP() {//HPに応じてコライダー２Dの範囲を減らしていく
@@ -39,6 +41,8 @@ public class BossEnemy : MonoBehaviour {
             speedAccessScript.setSpeed();
             rad.radius = 0.01f;
             deathAnim();
+            bgm.SetNormalBGM();
+            SoundManager.Instance.PlayVoice(0);
         }else if (Hp == 2) {
             Destroy(enemySield[0].gameObject);
             rad.radius = 0.65f;
