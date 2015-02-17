@@ -24,13 +24,17 @@ public class Result : MonoBehaviour {
 	private bool gameOver;
 	private string strScore;
 	private static float highScore;
+	private ClickPositionCreatePrefabScript stopFlg;
+	[SerializeField]
+	private GameObject ClickObj;
 	
-	void awake(){
+	void Awake(){
 		highScore = PlayerPrefs.GetFloat ("highScore");
 	}	
 	
 	void Start ()
 	{
+		stopFlg = ClickObj.GetComponent<ClickPositionCreatePrefabScript> ();
 		scoreText = scoreTextObj.GetComponent<Text> ();
 		nowScoreText = nowScoreTextObj.GetComponent<Text> ();
 		gameOver = false;
@@ -59,6 +63,7 @@ public class Result : MonoBehaviour {
 		}
 		canvas.SetActive (false);
 		resultView.SetActive (true);
+		stopFlg.sentFlg = 1;
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
 		if((highScore < score) || (highScore == null)){

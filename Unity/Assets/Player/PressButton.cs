@@ -5,12 +5,18 @@ using System.Collections;
 /// ボタンが押されたときの処理
 /// </summary>
 public class PressButton : MonoBehaviour {
-
+	private ClickPositionCreatePrefabScript stopFlg;
+	[SerializeField]
+	private GameObject ClickObj;
 	/// <summary>
 	/// 一時停止時に表示するCanvasを設定
 	/// </summary>
 	[SerializeField]
 	private GameObject stopMenu;
+
+	void Start(){
+		stopFlg = ClickObj.GetComponent<ClickPositionCreatePrefabScript> ();
+	}
 
 	/// <summary>
 	/// タイトル画面で,画面をタップする
@@ -24,13 +30,14 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonStop(){
 		if (Time.timeScale != 0) {
-			
+
+			stopFlg.sentFlg = 1;
 			Time.timeScale = 0;
 			stopMenu.SetActive(true);
 			Debug.Log("Stop!");
 		
 		} else {
-			
+			stopFlg.sentFlg = 0;
 			Time.timeScale = 1;
 			stopMenu.SetActive(false);
 			Debug.Log("Start!");
@@ -51,6 +58,7 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	public void PressButtonRetry(){
 		Debug.Log ("Press Button Retry");
+		stopFlg.sentFlg = 0;
 		Time.timeScale = 1;
 		Application.LoadLevel("normalMode");
 	}

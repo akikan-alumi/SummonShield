@@ -35,7 +35,10 @@ public class WallHit : MonoBehaviour {
             }
             Destroy(this.gameObject);
             Debug.Log("EnemyHit");
-        }
+		}else if (collision.gameObject.CompareTag("Button")) {
+			Destroy(this.gameObject);
+		}
 
 	}
+	
 }
