@@ -26,7 +26,7 @@ public class BossSpawner : MonoBehaviour {
 
         //スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
         
-            if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime /*&& result.sentLevel != 3*/) {
+            if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 3) {
                 if (BossRand == 1 || result.getSentLevel() == result.spawners.Length) {
                     count = 0;
 

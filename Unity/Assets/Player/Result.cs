@@ -16,8 +16,10 @@ public class Result : MonoBehaviour {
 	private GameObject canvas;
 	[SerializeField]
 	private GameObject nowScoreTextObj;
+    public GameObject conTextObj;
 	private Text nowScoreText;
 	private Text scoreText;
+    private Text conText;
 	[SerializeField]
 	private float addSpeed = 0.125f;
 	public GameObject[] spawners;
@@ -33,7 +35,7 @@ public class Result : MonoBehaviour {
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
-
+    private bool Congratulations = false;
 	
 	void Awake(){
 		spawns = spawnsObj.GetComponent<Spawns> ();
@@ -49,7 +51,7 @@ public class Result : MonoBehaviour {
 		gameOver = false;
 		spawners = GameObject.FindGameObjectsWithTag("Spawner");
 		circuits = GameObject.FindGameObjectsWithTag("Circuit");
-		
+        conText = conTextObj.GetComponent<Text>();
 		
 	}
 	
@@ -84,6 +86,7 @@ public class Result : MonoBehaviour {
 		stopFlg.sentFlg = 1;
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
+        conText.text = "Congratulations!!";
 		if((highScore < score) || (highScore == null)){
 			highScore = score;
 			PlayerPrefs.SetFloat("highScore",highScore);
@@ -94,9 +97,14 @@ public class Result : MonoBehaviour {
 	void change(){
 		if(level <= enemySu){
 			level++;
+            
 		}else{
 	//		level = 0;
 		}
+        if (level > spawners.Length) {//全クリしたら
+            Congratulations = true;
+            GameOver();
+        }
 	}
 
 	public void getLevel (int level){
@@ -104,8 +112,6 @@ public class Result : MonoBehaviour {
 	}
 	
 	public int getSentLevel(){
-		/*get{return level;}
-		set{ level = value;}*/
         return level;
 	}
 

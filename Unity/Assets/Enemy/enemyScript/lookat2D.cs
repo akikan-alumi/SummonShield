@@ -56,21 +56,5 @@ public class lookat2D : MonoBehaviour {
     public void setSpeed() {
         speed = 0;
     }
-	/*void OnDestroy(){
-		if (cChild != null) {
-			cChild.EnabledSwitch (true);
-		}
-		if (cParent != null){
-			cParent.EnabledSwitch (true);
-		}
-	}
-	void OnTriggerEnter2D(Collider2D col){
-		if (col.gameObject.CompareTag ("Circuit")) {
-			if(col.gameObject.GetComponent<CircuitChild>() != null){
-				cChild = col.gameObject.GetComponent<CircuitChild>();
-			} else if(col.gameObject.GetComponent<CircuitParent>() != null){
-				cParent = col.gameObject.GetComponent<CircuitParent>();
-			}
-		}
-	}*/
+
 }
