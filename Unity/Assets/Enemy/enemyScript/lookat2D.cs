@@ -3,18 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class lookat2D : MonoBehaviour {
-    [SerializeField]
-	private float speed = 1;
+	private float speed;
+	private float[] speedLevel = {1.0f,1.1f,1.2f,1.3f,1.4f,1.5f};
+	private int level = 0;
 	//playerを指定
 	[SerializeField]
 	private GameObject obj;
+	public GameObject ResultObj;
+	private Result result;
+
+	void Start(){
+		ResultObj = GameObject.Find ("Result").gameObject;
+		result = ResultObj.GetComponent<Result>();
+	}
 
 	//public CircuitChild  cChild;
 	//public CircuitParent cParent;
 	
 	//private GameObject circuit
     void Update() {
-
+		level = result.sentLevel;
+		speed = speedLevel [level];
 		LookAt2D (obj);
     }
 

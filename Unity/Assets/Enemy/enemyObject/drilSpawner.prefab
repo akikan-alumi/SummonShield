@@ -83,8 +83,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574acd724e5de4e3a9ec6ce7522b7691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 60
-  enemy: []
+  enemy:
+  - {fileID: 101292, guid: bd0e18b2356b0d64491d2503b01bd8ff, type: 2}
+  - {fileID: 160952, guid: 36bf83d15a048b3488047364a4d8d8f5, type: 2}
+  - {fileID: 190804, guid: a7e11835d3514e748b08838821e3ad57, type: 2}
+  - {fileID: 159086, guid: 8fb98a8b1ec172f4394d20c97ab00935, type: 2}
+  - {fileID: 101538, guid: f3f33cc2d0dbc8f4ea6097a467ff2f28, type: 2}
+  - {fileID: 190804, guid: a7e11835d3514e748b08838821e3ad57, type: 2}
   startTime: 10
   ResultObj: {fileID: 0}
 --- !u!114 &11442260

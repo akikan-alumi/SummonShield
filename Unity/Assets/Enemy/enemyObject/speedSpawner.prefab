@@ -95,13 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574acd724e5de4e3a9ec6ce7522b7691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 60
   enemy:
-  - {fileID: 128356, guid: e0cd836aa2f61af40b26f627ad4684e4, type: 2}
+  - {fileID: 105552, guid: 48da00a1134a9254cba6e870fac82e1f, type: 2}
   - {fileID: 155102, guid: d9441587407d451468d7ef587d48fda0, type: 2}
   - {fileID: 137768, guid: 4cc6773f2c0e5c34ab9be801ea122b66, type: 2}
+  - {fileID: 103036, guid: 4a2a2ec7411f8b04493b60fef493e109, type: 2}
   - {fileID: 166710, guid: c1fb0c4e7efa75245bfd98b16ce56088, type: 2}
-  - {fileID: 105552, guid: 48da00a1134a9254cba6e870fac82e1f, type: 2}
+  - {fileID: 128356, guid: e0cd836aa2f61af40b26f627ad4684e4, type: 2}
   startTime: 0
   ResultObj: {fileID: 0}
 --- !u!114 &11476808

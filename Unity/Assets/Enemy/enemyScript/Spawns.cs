@@ -5,8 +5,7 @@ using System.Collections;
 public class Spawns : MonoBehaviour {
 
 	private int count = 0;
-	[SerializeField]
-	private int spawnSpace = 60;
+	private int spawnSpace;
 	[SerializeField]
 	private GameObject[] enemy;
 	[SerializeField]
@@ -16,6 +15,7 @@ public class Spawns : MonoBehaviour {
 	private int enemySu;
 	public GameObject ResultObj;
 	private Result result;
+	private int[] spaseLevel = {100,90,80,70,60,50};
 
 	void Start(){
 		result = ResultObj.GetComponent<Result> ();
@@ -26,6 +26,7 @@ public class Spawns : MonoBehaviour {
 	void Update () {
 		count++;
 		nowTime += Time.deltaTime;
+		spawnSpace = spaseLevel [level];
 		level = result.sentLevel;
 
 		//スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
