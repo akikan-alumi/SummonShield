@@ -13,7 +13,6 @@ GameObject:
   - 111: {fileID: 11162524}
   - 114: {fileID: 11495352}
   - 111: {fileID: 11166424}
-  - 111: {fileID: 11195778}
   m_Layer: 0
   m_Name: ExplosionObj
   m_TagString: Untagged
@@ -70,21 +69,7 @@ Animation:
   m_GameObject: {fileID: 132372}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!111 &11195778
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132372}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: e36fa914376aa444c8087a69f1b75b67, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1

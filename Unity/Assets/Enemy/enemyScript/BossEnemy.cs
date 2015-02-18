@@ -73,7 +73,12 @@ public class BossEnemy : MonoBehaviour {
             if (ExproAnimCount >= 10) {
                 float rnd1 = Random.Range(-1.3f,1.3f);
                 float rnd2 = Random.Range(-1.3f, 1.3f);
-                Instantiate(explosion,new Vector3(rnd1,rnd2,0),Quaternion.identity);
+
+                Instantiate(explosion,new Vector3(//インスタンス生成をするオブジェクトをある程度散らす。
+                    this.transform.localPosition.x+rnd1,
+                    this.transform.localPosition.y+rnd2,
+                    0),Quaternion.identity);
+
                 ExproAnimCount = 0;
             }
         }
