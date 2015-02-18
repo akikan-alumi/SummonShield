@@ -22,6 +22,7 @@ public class PressButton : MonoBehaviour {
 	/// タイトル画面で,画面をタップする
 	/// </summary>
 	public void TapScreen(){
+		Time.timeScale = 1;
 		Debug.Log ("Tap Screen");
 	}
 

@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738f9d262bbe8cc45a5315d6255b8531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 148096, guid: b2abb716d6c893a49b9c263c8bd15f37, type: 2}
   Wall: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
 --- !u!1001 &100100000
 Prefab:

@@ -59,8 +59,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSpace: 60
-  prefab: {fileID: 112862, guid: af0c248a64a14fc47a6ce1afd69a4e3a, type: 2}
+  enemy: []
   startTime: 0
+  ResultObj: {fileID: 0}
 --- !u!114 &11466068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd2394f41ed7f749a1c75257d55c302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 448096, guid: b2abb716d6c893a49b9c263c8bd15f37, type: 2}
   targetAngle: 90
   extraTargetAngle: 0
 --- !u!114 &11488594
