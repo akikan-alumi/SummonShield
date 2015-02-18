@@ -20,7 +20,7 @@ public class Result : MonoBehaviour {
 	private Text scoreText;
 	[SerializeField]
 	private float addSpeed = 0.125f;
-	private GameObject[] spawners;
+	public GameObject[] spawners;
 	private bool gameOver;
 	private string strScore;
 	private static float highScore;
@@ -103,9 +103,10 @@ public class Result : MonoBehaviour {
 		this.level = level;
 	}
 	
-	public int sentLevel{
-		get{return level;}
-		set{ level = value;}
+	public int getSentLevel(){
+		/*get{return level;}
+		set{ level = value;}*/
+        return level;
 	}
 
 	

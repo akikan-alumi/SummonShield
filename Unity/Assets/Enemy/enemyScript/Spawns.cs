@@ -27,7 +27,7 @@ public class Spawns : MonoBehaviour {
 		count++;
 		nowTime += Time.deltaTime;
 		spawnSpace = spaseLevel [level];
-		level = result.sentLevel;
+		level = result.getSentLevel();
 
 		//スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
 		if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime) {

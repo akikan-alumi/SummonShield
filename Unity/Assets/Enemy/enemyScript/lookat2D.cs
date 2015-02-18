@@ -17,7 +17,7 @@ public class lookat2D : MonoBehaviour {
         if (GameObject.Find("Result")) {
             ResultObj = GameObject.Find("Result").gameObject;
             result = ResultObj.GetComponent<Result>();
-            level = result.sentLevel;
+            level = result.getSentLevel();
             speed = speedLevel[level];
         }
 	}

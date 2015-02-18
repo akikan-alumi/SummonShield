@@ -11381,6 +11381,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   addSpeed: 15
+  spawners: []
   ClickObj: {fileID: 1383108575}
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
 --- !u!4 &359353138

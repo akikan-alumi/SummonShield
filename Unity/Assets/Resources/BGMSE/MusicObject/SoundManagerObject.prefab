@@ -42,7 +42,7 @@ MonoBehaviour:
   volume:
     BGM: .100000001
     Voice: .280000001
-    SE: .0500000007
+    SE: .00999999978
     Mute: 0
   BGM:
   - {fileID: 8300000, guid: ada0e89eb49ac044391578456a964d65, type: 3}
