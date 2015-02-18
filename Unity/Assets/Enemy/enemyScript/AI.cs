@@ -24,7 +24,7 @@ public class AI : MonoBehaviour {
 
 
     void Update() {
-
+        
 #if LOOKAT
         // 対象方向を向く
 

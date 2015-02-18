@@ -4,11 +4,13 @@ using System.Collections;
 public class Revolution : MonoBehaviour {
 	[SerializeField]
 	private int speed = 10;
+    [SerializeField]
 	private float changeTime = 0f;
+    [SerializeField]
 	private float changeNum = 0f;
 	// Use this for initialization
 	void Start () {
-		
+        Time.timeScale = 1f;
 	}
 	
 	// Update is called once per frame

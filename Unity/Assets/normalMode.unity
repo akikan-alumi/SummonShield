@@ -6060,6 +6060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  changeTime: 0
+  changeNum: 0
 --- !u!114 &187336506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15372,6 +15374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  changeTime: 0
+  changeNum: 0
 --- !u!114 &496520673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59050,6 +59054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  changeTime: 0
+  changeNum: 0
 --- !u!114 &2017808698
 MonoBehaviour:
   m_ObjectHideFlags: 0

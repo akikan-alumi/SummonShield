@@ -50,6 +50,7 @@ public class PressButton : MonoBehaviour {
 	/// TitleButtonが押されたらTITLESceneに移動する
 	/// </summary>
 	public void PressButtonTitle(){
+        SoundManager.Instance.StopBGM();
 		Debug.Log ("Press Button Title");
 		Application.LoadLevel("titleScene");
 	}
@@ -58,6 +59,7 @@ public class PressButton : MonoBehaviour {
 	/// RetryButtonが押されたらScene再読み込み
 	/// </summary>
 	public void PressButtonRetry(){
+        SoundManager.Instance.StopBGM();
 		Debug.Log ("Press Button Retry");
 		stopFlg.sentFlg = 0;
 		Time.timeScale = 1;
