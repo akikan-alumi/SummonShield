@@ -27,18 +27,28 @@ public class Result : MonoBehaviour {
 	private ClickPositionCreatePrefabScript stopFlg;
 	[SerializeField]
 	private GameObject ClickObj;
+	private float[] levelLine = {1000,2000,3000,4000,5000};
+	private int level = 0;
+	private int enemySu;
+	private Spawns spawns;
+	public GameObject spawnsObj;
+	private GameObject[] circuits;
+
 	
 	void Awake(){
+		spawns = spawnsObj.GetComponent<Spawns> ();
 		highScore = PlayerPrefs.GetFloat ("highScore");
 	}	
-	
+
 	void Start ()
 	{
+		enemySu = spawns.sentEnemy;
 		stopFlg = ClickObj.GetComponent<ClickPositionCreatePrefabScript> ();
 		scoreText = scoreTextObj.GetComponent<Text> ();
 		nowScoreText = nowScoreTextObj.GetComponent<Text> ();
 		gameOver = false;
-		spawners  = GameObject.FindGameObjectsWithTag("Spawner");
+		spawners = GameObject.FindGameObjectsWithTag("Spawner");
+		circuits = GameObject.FindGameObjectsWithTag("Circuit");
 		
 		
 	}
@@ -51,6 +61,10 @@ public class Result : MonoBehaviour {
 			score = tempScore * addSpeed; 
 			strScore = score.ToString("F0");
 			nowScoreText.text = /*"score:"*/"" + strScore;
+			if(score >= levelLine[level]){
+				change();
+				Debug.Log (level);
+			}
 			//Debug.Log (dateTime);
 		}
 	}
@@ -61,8 +75,12 @@ public class Result : MonoBehaviour {
 		foreach (GameObject spa in spawners) {
 			Destroy(spa);
 		}
+		foreach (GameObject cir in circuits) {
+			Destroy(cir);
+		}
 		canvas.SetActive (false);
 		resultView.SetActive (true);
+
 		stopFlg.sentFlg = 1;
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
@@ -72,4 +90,23 @@ public class Result : MonoBehaviour {
 			
 		}
 	}
+
+	void change(){
+		if(level <= enemySu){
+			level++;
+		}else{
+	//		level = 0;
+		}
+	}
+
+	public void getLevel (int level){
+		this.level = level;
+	}
+	
+	public int sentLevel{
+		get{return level;}
+		set{ level = value;}
+	}
+
+	
 }
