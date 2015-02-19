@@ -7,4 +7,9 @@ public class Explode : MonoBehaviour {
 	void Awake () {
         Destroy(this.gameObject,0.5f);
 	}
+    void Update() {
+        if (Time.timeScale == 0) {
+            Destroy(this.gameObject);
+        }
+    }
 }

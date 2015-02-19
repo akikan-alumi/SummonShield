@@ -70,7 +70,7 @@ public class BossEnemy : MonoBehaviour {
     void Update() {
         if (Hp < 1) {
             ExproAnimCount++;
-            if (ExproAnimCount >= 10) {
+            if (ExproAnimCount >= 5) {
                 float rnd1 = Random.Range(-1.3f,1.3f);
                 float rnd2 = Random.Range(-1.3f, 1.3f);
 

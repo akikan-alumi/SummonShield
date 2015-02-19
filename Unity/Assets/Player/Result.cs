@@ -29,7 +29,7 @@ public class Result : MonoBehaviour {
 	private ClickPositionCreatePrefabScript stopFlg;
 	[SerializeField]
 	private GameObject ClickObj;
-	public float[] levelLine = {1000,2000,3000,4000,5000,6000};
+	public float[] levelLine = {1000,2000,3000,4000,5000,6001};
 	private int level = 0;
 	//private int enemySu;
 	private Spawns spawns;
@@ -84,7 +84,11 @@ public class Result : MonoBehaviour {
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
         conText.text = "Congratulations!!";
-        if (score >= 6000) conTextObj.SetActive(false);
+        if (score >= levelLine[levelLine.Length - 1]) {//levelLine[levelLine.Length-1]は6000
+            conTextObj.SetActive(true);
+        } else {
+            conTextObj.SetActive(false);
+        }
 		if((highScore < score) || (highScore == null)){
 			highScore = score;
 			PlayerPrefs.SetFloat("highScore",highScore);
@@ -98,7 +102,7 @@ public class Result : MonoBehaviour {
         }else{
 	//		level = 0;
 		}
-        if (level > spawns.enemy.Length -1) {//全クリしたら spawns.enemy.Length は6
+        if (level > spawns.enemy.Length - 1 && !GameObject.Find("BossEnemy1")) {//全クリしたら spawns.enemy.Length は6
             Congratulations = true;
             GameOver();
             Debug.Log("Congratulations + 現在のlevel"+level);
