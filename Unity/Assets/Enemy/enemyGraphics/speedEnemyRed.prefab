@@ -70,7 +70,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  speedLevel:
+  - 1
+  - 1.10000002
+  - 1.20000005
+  - 1.29999995
+  - 1.39999998
+  - 1.5
+  - 1.60000002
   obj: {fileID: 148096, guid: b2abb716d6c893a49b9c263c8bd15f37, type: 2}
+  ResultObj: {fileID: 0}
 --- !u!114 &11428356
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -29,7 +29,7 @@ public class Result : MonoBehaviour {
 	private ClickPositionCreatePrefabScript stopFlg;
 	[SerializeField]
 	private GameObject ClickObj;
-	public float[] levelLine = {1000,2000,3000,4000,5000};
+	public float[] levelLine = {1000,2000,3000,4000,5000,6000};
 	private int level = 0;
 	//private int enemySu;
 	private Spawns spawns;
@@ -59,10 +59,10 @@ public class Result : MonoBehaviour {
 			tempScore = dateTime;
 			score = tempScore * addSpeed; 
 			strScore = score.ToString("F0");
-			nowScoreText.text = /*"score:"*/"" + strScore;
+			nowScoreText.text = "" + strScore;
 			if(score >= levelLine[level]){
 				change();
-				Debug.Log (level);
+				Debug.Log ("level"+level);
 			}
 			//Debug.Log (dateTime);
 		}
@@ -84,6 +84,7 @@ public class Result : MonoBehaviour {
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
         conText.text = "Congratulations!!";
+        if (level != 7) conTextObj.SetActive(false);
 		if((highScore < score) || (highScore == null)){
 			highScore = score;
 			PlayerPrefs.SetFloat("highScore",highScore);
@@ -97,13 +98,14 @@ public class Result : MonoBehaviour {
         }else{
 	//		level = 0;
 		}
-        if (level == spawners.Length) {//全クリしたら
+        if (level > spawns.enemy.Length -1) {//全クリしたら spawns.enemy.Length は6
             Congratulations = true;
             GameOver();
+            Debug.Log("Congratulations + 現在のlevel"+level);
         }
 	}
 
-	public void getLevel (int level){
+	public void setLevel (int level){
 		this.level = level;
 	}
 	
