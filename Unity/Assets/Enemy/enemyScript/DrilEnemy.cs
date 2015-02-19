@@ -8,7 +8,7 @@ public class DrilEnemy : MonoBehaviour {
     public GameObject enemySield;
 
 	void Start(){
-		if(GameObject.Find("BossEnemy1")  != null){
+        if (GameObject.Find("BossEnemy1(Clone)")) {
 			Destroy(this.gameObject);
 			        }
 	}

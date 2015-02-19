@@ -58,10 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574acd724e5de4e3a9ec6ce7522b7691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 60
   enemy: []
   startTime: 0
   ResultObj: {fileID: 0}
+  spaseLevel: 640000005a00000050000000460000003c0000003200000032000000
 --- !u!114 &11466068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +88,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  changeTime: 0
+  changeNum: 0
 --- !u!212 &21266066
 SpriteRenderer:
   m_ObjectHideFlags: 1

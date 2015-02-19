@@ -8,11 +8,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432372}
-  - 95: {fileID: 9504372}
   - 212: {fileID: 21236656}
   - 111: {fileID: 11162524}
   - 114: {fileID: 11495352}
-  - 111: {fileID: 11166424}
+  - 95: {fileID: 9589868}
   m_Layer: 0
   m_Name: ExplosionObj
   m_TagString: Untagged
@@ -32,7 +31,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!95 &9504372
+--- !u!95 &9589868
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -41,7 +40,7 @@ Animator:
   m_GameObject: {fileID: 132372}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 529b534e6a7a13543b8d08a93490dede, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4fe45315ba743524281eec336385bd62, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -50,20 +49,6 @@ Animator:
 --- !u!111 &11162524
 Animation:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132372}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e36fa914376aa444c8087a69f1b75b67, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!111 &11166424
-Animation:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132372}

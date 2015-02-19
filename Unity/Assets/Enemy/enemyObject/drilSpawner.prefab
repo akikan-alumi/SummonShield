@@ -91,10 +91,11 @@ MonoBehaviour:
   - {fileID: 190804, guid: a7e11835d3514e748b08838821e3ad57, type: 2}
   - {fileID: 159086, guid: 8fb98a8b1ec172f4394d20c97ab00935, type: 2}
   - {fileID: 101538, guid: f3f33cc2d0dbc8f4ea6097a467ff2f28, type: 2}
-  - {fileID: 190804, guid: a7e11835d3514e748b08838821e3ad57, type: 2}
+  - {fileID: 123894, guid: 287d85fda65d79c4c87849e421b28eee, type: 2}
+  - {fileID: 123894, guid: 287d85fda65d79c4c87849e421b28eee, type: 2}
   startTime: 10
   ResultObj: {fileID: 0}
-  spaseLevel: 640000005a00000050000000460000003c00000032000000
+  spaseLevel: 640000005a00000050000000460000003c0000003200000032000000
 --- !u!114 &11442260
 MonoBehaviour:
   m_ObjectHideFlags: 1

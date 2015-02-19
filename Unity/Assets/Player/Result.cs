@@ -29,13 +29,14 @@ public class Result : MonoBehaviour {
 	private ClickPositionCreatePrefabScript stopFlg;
 	[SerializeField]
 	private GameObject ClickObj;
-	public float[] levelLine = {1000,2000,3000,4000,5000,6001};
+	public float[] levelLine = {1000,2000,3000,4000,5000,6000,7000};
 	private int level = 0;
 	//private int enemySu;
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
     private bool Congratulations = false;
+    private int end;
 
 	void Start ()
 	{
@@ -84,7 +85,7 @@ public class Result : MonoBehaviour {
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
         conText.text = "Congratulations!!";
-        if (score >= levelLine[levelLine.Length - 1]) {//levelLine[levelLine.Length-1]は6000
+        if (score >= levelLine[levelLine.Length - 2] ) {//levelLine[levelLine.Length-2]は6000
             conTextObj.SetActive(true);
         } else {
             conTextObj.SetActive(false);
@@ -97,20 +98,22 @@ public class Result : MonoBehaviour {
 	}
 
 	void change(){
+        Debug.Log("Congratulations + 現在のlevel" + level);
 		if(level <= spawns.enemy.Length){
 			level++;
         }else{
 	//		level = 0;
 		}
-        if (level > spawns.enemy.Length - 1 && !GameObject.Find("BossEnemy1")) {//全クリしたら spawns.enemy.Length は6
+        if (end >6||level>6) {//全クリしたら spawns.enemy.Length は6
             Congratulations = true;
             GameOver();
             Debug.Log("Congratulations + 現在のlevel"+level);
         }
 	}
 
-	public void setLevel (int level){
-		this.level = level;
+	public void setEnd (){
+		this.end++;
+        Debug.LogError("えんｄ"+end);
 	}
 	
 	public int getSentLevel(){

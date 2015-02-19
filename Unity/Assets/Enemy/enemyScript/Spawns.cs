@@ -15,7 +15,7 @@ public class Spawns : MonoBehaviour {
 	private int enemySu;
 	public GameObject ResultObj;
 	private Result result;
-	public int[] spaseLevel = {100,90,80,70,60,50};
+	public int[] spaseLevel = {100,90,80,70,60,50,100};
 
 	void Start(){
 		result = ResultObj.GetComponent<Result> ();

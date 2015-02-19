@@ -8,7 +8,8 @@ public class SpeedEnemy : MonoBehaviour {
 	public GameObject bossEnemy;
 
 	void Start(){
-		if(GameObject.Find("BossEnemy1") != null){
+        if (GameObject.Find("BossEnemy1(Clone)") != null) {
+            Debug.Log("ボスがいたので消えます");
 			Destroy(this.gameObject);
 		}
 	}
