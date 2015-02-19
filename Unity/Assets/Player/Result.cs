@@ -84,7 +84,7 @@ public class Result : MonoBehaviour {
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
         conText.text = "Congratulations!!";
-        if (level != 7) conTextObj.SetActive(false);
+        if (score >= 6000) conTextObj.SetActive(false);
 		if((highScore < score) || (highScore == null)){
 			highScore = score;
 			PlayerPrefs.SetFloat("highScore",highScore);
