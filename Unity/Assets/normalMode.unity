@@ -11388,7 +11388,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 100
+  addSpeed: 15
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -23027,11 +23027,11 @@ Prefab:
       objectReference: {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: spawnSpace
-      value: 600
+      value: 3600
       objectReference: {fileID: 0}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: startTime
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: ResultObj
@@ -24161,10 +24161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5c64721bf66a44d9e9c26e3f17a70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 600
+  spawnSpace: 3600
   enemy:
   - {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
-  startTime: 10
+  startTime: 60
   ResultObj: {fileID: 359353136}
 --- !u!114 &825864139
 MonoBehaviour:
