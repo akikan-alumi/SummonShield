@@ -11,13 +11,14 @@ public class BossSpawner : MonoBehaviour {
 	[SerializeField]
 	private int startTime = 0;
 	private float nowTime = 0f;
+	public GameObject ResultObj;
 
     //ボスが出るかどうかの変数
     private int BossRand;
     private Result result;
     void Start() {
-        BossRand = Random.Range(0, 2);//0~1の範囲は0,2でランダムで選ばれる
-        result = GetComponent<Result>();
+		BossRand = 1;//Random.Range(0, 2);//0~1の範囲は0,2でランダムで選ばれる
+        result = ResultObj.GetComponent<Result>();
     }
 	// Update is called once per frame
 	void Update () {

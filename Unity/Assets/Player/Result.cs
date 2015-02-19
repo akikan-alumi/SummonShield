@@ -29,22 +29,19 @@ public class Result : MonoBehaviour {
 	private ClickPositionCreatePrefabScript stopFlg;
 	[SerializeField]
 	private GameObject ClickObj;
-	private float[] levelLine = {1000,2000,3000,4000,5000};
+	public float[] levelLine = {1000,2000,3000,4000,5000};
 	private int level = 0;
-	private int enemySu;
+	//private int enemySu;
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
     private bool Congratulations = false;
-	
-	void Awake(){
-		spawns = spawnsObj.GetComponent<Spawns> ();
-		highScore = PlayerPrefs.GetFloat ("highScore");
-	}	
 
 	void Start ()
 	{
-		enemySu = spawns.sentEnemy;
+		spawns = spawnsObj.GetComponent<Spawns> ();
+		highScore = PlayerPrefs.GetFloat ("highScore");
+		//enemySu = spawns.sentEnemy;
 		stopFlg = ClickObj.GetComponent<ClickPositionCreatePrefabScript> ();
 		scoreText = scoreTextObj.GetComponent<Text> ();
 		nowScoreText = nowScoreTextObj.GetComponent<Text> ();
@@ -95,13 +92,12 @@ public class Result : MonoBehaviour {
 	}
 
 	void change(){
-		if(level <= enemySu){
+		if(level <= spawns.enemy.Length){
 			level++;
-            
-		}else{
+        }else{
 	//		level = 0;
 		}
-        if (level > spawners.Length) {//全クリしたら
+        if (level == spawners.Length) {//全クリしたら
             Congratulations = true;
             GameOver();
         }

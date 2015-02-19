@@ -17,7 +17,7 @@ public class Player : MonoBehaviour {
             SoundManager.Instance.StopBGM();
             SoundManager.Instance.PlaySE(4);
 			Destroy(col.gameObject);
-			finish.GameOver();
+			//finish.GameOver();
 		}
 	}
 }

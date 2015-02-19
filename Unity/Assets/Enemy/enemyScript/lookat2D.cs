@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class lookat2D : MonoBehaviour {
     [SerializeField]
 	private float speed;
-	private float[] speedLevel = {1.0f,1.1f,1.2f,1.3f,1.4f,1.5f};
+	public float[] speedLevel = {1.0f};
 	private int level = 0;
 	//playerを指定
 	[SerializeField]

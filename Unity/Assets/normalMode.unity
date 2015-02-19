@@ -6078,11 +6078,12 @@ MonoBehaviour:
   - {fileID: 101292, guid: bd0e18b2356b0d64491d2503b01bd8ff, type: 2}
   - {fileID: 160952, guid: 36bf83d15a048b3488047364a4d8d8f5, type: 2}
   - {fileID: 190804, guid: a7e11835d3514e748b08838821e3ad57, type: 2}
-  - {fileID: 159086, guid: 8fb98a8b1ec172f4394d20c97ab00935, type: 2}
+  - {fileID: 103036, guid: 4a2a2ec7411f8b04493b60fef493e109, type: 2}
   - {fileID: 101538, guid: f3f33cc2d0dbc8f4ea6097a467ff2f28, type: 2}
   - {fileID: 190804, guid: a7e11835d3514e748b08838821e3ad57, type: 2}
   startTime: 10
   ResultObj: {fileID: 359353136}
+  spaseLevel: 640000005a00000050000000460000003c00000032000000
 --- !u!114 &187336507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11382,9 +11383,15 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 15
+  addSpeed: 100
   spawners: []
   ClickObj: {fileID: 1383108575}
+  levelLine:
+  - 1000
+  - 2000
+  - 3000
+  - 4000
+  - 5000
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
 --- !u!4 &359353138
 Transform:
@@ -15400,6 +15407,7 @@ MonoBehaviour:
   - {fileID: 128356, guid: e0cd836aa2f61af40b26f627ad4684e4, type: 2}
   startTime: 0
   ResultObj: {fileID: 359353136}
+  spaseLevel: 640000005a00000050000000460000003c00000032000000
 --- !u!114 &496520674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19773,6 +19781,10 @@ Prefab:
       propertyPath: ResultObj
       value: 
       objectReference: {fileID: 359353136}
+    - target: {fileID: 11442258, guid: 93e28421068bda44e8cd16af71628201, type: 2}
+      propertyPath: enemy.Array.data[3]
+      value: 
+      objectReference: {fileID: 103036, guid: 4a2a2ec7411f8b04493b60fef493e109, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93e28421068bda44e8cd16af71628201, type: 2}
   m_RootGameObject: {fileID: 187336500}
@@ -22999,12 +23011,16 @@ Prefab:
       objectReference: {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: spawnSpace
-      value: 3600
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: startTime
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
+      propertyPath: ResultObj
+      value: 
+      objectReference: {fileID: 359353136}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
   m_RootGameObject: {fileID: 825864136}
@@ -24129,10 +24145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5c64721bf66a44d9e9c26e3f17a70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 3600
+  spawnSpace: 600
   enemy:
   - {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
-  startTime: 60
+  startTime: 10
+  ResultObj: {fileID: 359353136}
 --- !u!114 &825864139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59146,6 +59163,7 @@ MonoBehaviour:
   - {fileID: 128356, guid: e0cd836aa2f61af40b26f627ad4684e4, type: 2}
   startTime: 0
   ResultObj: {fileID: 359353136}
+  spaseLevel: 640000005a00000050000000460000003c00000032000000
 --- !u!114 &2017808699
 MonoBehaviour:
   m_ObjectHideFlags: 0

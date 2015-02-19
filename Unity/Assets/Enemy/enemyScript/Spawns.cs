@@ -7,7 +7,7 @@ public class Spawns : MonoBehaviour {
 	private int count = 0;
 	private int spawnSpace;
 	[SerializeField]
-	private GameObject[] enemy;
+	public GameObject[] enemy;
 	[SerializeField]
 	private int startTime = 0;
 	private float nowTime = 0f;
@@ -15,7 +15,7 @@ public class Spawns : MonoBehaviour {
 	private int enemySu;
 	public GameObject ResultObj;
 	private Result result;
-	private int[] spaseLevel = {100,90,80,70,60,50};
+	public int[] spaseLevel = {100,90,80,70,60,50};
 
 	void Start(){
 		result = ResultObj.GetComponent<Result> ();
@@ -35,20 +35,18 @@ public class Spawns : MonoBehaviour {
 			count = 0;
 						
 			Instantiate (enemy[level], this.transform.position, this.transform.rotation);
-			Debug.Log (level);
+			//Debug.Log (level);
 				
 		} else if(Time.timeScale != 1){
 			count = 0;	
 		}
 	}
 
-	
-	public void getEnemyObj (int enemySu){
-		this.enemySu = enemySu;
-	}
-	
-	public int sentEnemy{
-		get{return enemySu;}
-		set{ enemySu = value;}
+	/// <summary>
+	/// エネミーのゲッター
+	/// </summary>
+	/// <value>The sent enemy.</value>
+	public GameObject[] Enemy{
+		get{return enemy;}
 	}
 }
