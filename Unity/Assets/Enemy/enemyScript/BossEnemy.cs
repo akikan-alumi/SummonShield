@@ -18,6 +18,7 @@ public class BossEnemy : MonoBehaviour {
 
     private int ExproAnimCount = 0;
 	void Awake(){
+
 		kairo = GameObject.Find ("CircuitSwitch").gameObject;
 		cirSwi = kairo.GetComponent<CircuitSwitch>();
         bgm = GameObject.Find("BGMobject").GetComponent<BGM>();
@@ -83,4 +84,5 @@ public class BossEnemy : MonoBehaviour {
             }
         }
     }
+
 }

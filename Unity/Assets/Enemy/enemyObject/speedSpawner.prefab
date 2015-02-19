@@ -84,6 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  changeTime: 0
+  changeNum: 0
 --- !u!114 &11476806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +106,7 @@ MonoBehaviour:
   - {fileID: 128356, guid: e0cd836aa2f61af40b26f627ad4684e4, type: 2}
   startTime: 0
   ResultObj: {fileID: 0}
+  spaseLevel: 640000005a00000050000000460000003c00000032000000
 --- !u!114 &11476808
 MonoBehaviour:
   m_ObjectHideFlags: 1

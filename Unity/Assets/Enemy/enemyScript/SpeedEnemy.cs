@@ -5,6 +5,13 @@ public class SpeedEnemy : MonoBehaviour {
 
     [SerializeField]
     private int Hp = 1;
+	public GameObject bossEnemy;
+
+	void Start(){
+		if(GameObject.Find("BossEnemy1") != null){
+			Destroy(this.gameObject);
+		}
+	}
 
     public void setHP() {
         Hp--;
