@@ -30,10 +30,9 @@ public class Spawns : MonoBehaviour {
 		level = result.getSentLevel();
 
 		//スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
-		if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime) {
+		if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && GameObject.Find("BossEnemy1") == null ) {
 						
 			count = 0;
-						
 			Instantiate (enemy[level], this.transform.position, this.transform.rotation);
 			//Debug.Log (level);
 				
@@ -49,4 +48,5 @@ public class Spawns : MonoBehaviour {
 	public GameObject[] Enemy{
 		get{return enemy;}
 	}
+
 }

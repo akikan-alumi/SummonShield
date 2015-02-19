@@ -7,6 +7,12 @@ public class DrilEnemy : MonoBehaviour {
 
     public GameObject enemySield;
 
+	void Start(){
+		if(GameObject.Find("BossEnemy1")  != null){
+			Destroy(this.gameObject);
+			        }
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision){
 		if (collision.gameObject.CompareTag ("Wall")) {
 

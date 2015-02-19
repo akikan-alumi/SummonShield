@@ -27,8 +27,8 @@ public class BossSpawner : MonoBehaviour {
 
         //スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
         
-            if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 3) {
-                if (BossRand == 1 || result.getSentLevel() == result.spawners.Length) {
+            if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 4) {
+                if (BossRand == 1 || result.getSentLevel() == result.spawners.Length-1) {
                     count = 0;
 
                     Instantiate(enemy[0], this.transform.position, this.transform.rotation);
