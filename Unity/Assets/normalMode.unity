@@ -11448,7 +11448,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 60
+  addSpeed: 10
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
