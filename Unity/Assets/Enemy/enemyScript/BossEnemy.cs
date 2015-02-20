@@ -17,14 +17,20 @@ public class BossEnemy : MonoBehaviour {
     public GameObject explosion;
     private GameObject res;
     private Result rs;
-
+	private int level;
     private int ExproAnimCount = 0;
+	private Spawns spawns;
+	public GameObject spawnsObj;
+
 	void Awake(){
+		spawns = spawnsObj.GetComponent<Spawns> ();
         res = GameObject.Find("Result").gameObject;
         rs = res.GetComponent<Result>();
 		kairo = GameObject.Find ("CircuitSwitch").gameObject;
 		cirSwi = kairo.GetComponent<CircuitSwitch>();
         bgm = GameObject.Find("BGMobject").GetComponent<BGM>();
+		level = rs.getSentLevel();
+
 	}
 
     void Start() {
@@ -66,7 +72,9 @@ public class BossEnemy : MonoBehaviour {
 
 	//ボス撃破でCSwitch起動
 	void OnDestroy(){
-		rs.congratulations();
+		if (level == spawns.enemy.Length-1) {
+			rs.congratulations ();
+		}
 	}
     void deathAnim() {
         myAnim.SetBool("dead", true);

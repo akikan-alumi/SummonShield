@@ -61,7 +61,7 @@ public class Result : MonoBehaviour {
 			score = tempScore * addSpeed; 
 			strScore = score.ToString("F0");
 			nowScoreText.text = "" + strScore;
-			if(score >= levelLine[level]){
+			if(score >= levelLine[level] ){
 				change();
 				Debug.Log ("level"+level);
 			}
@@ -99,7 +99,7 @@ public class Result : MonoBehaviour {
 
 	void change(){
 			Debug.Log ("Congratulations + 現在のlevel" + level);
-			if (level < spawns.enemy.Length) {
+			if (level < spawns.enemy.Length -1) {
 					level++;
 			} else {
 					//		level = 0;
