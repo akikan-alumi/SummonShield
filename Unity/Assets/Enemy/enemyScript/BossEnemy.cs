@@ -21,6 +21,7 @@ public class BossEnemy : MonoBehaviour {
     private int ExproAnimCount = 0;
 	private Spawns spawns;
 	public GameObject spawnsObj;
+	private bool clear = false;
 
 	void Awake(){
 		spawns = spawnsObj.GetComponent<Spawns> ();
@@ -44,6 +45,7 @@ public class BossEnemy : MonoBehaviour {
         myAnim = this.GetComponent<Animator>();
         deadSwitch = false;
         bgm.SetBOSSBGM();
+
     }
 
     public void setHP() {//HPに応じてコライダー２Dの範囲を減らしていく
@@ -57,6 +59,7 @@ public class BossEnemy : MonoBehaviour {
             deathAnim();
             bgm.SetNormalBGM();
             SoundManager.Instance.PlayVoice(0);
+			clear = true;
             
         }else if (Hp == 2) {
             Destroy(enemySield[0].gameObject);
@@ -72,7 +75,7 @@ public class BossEnemy : MonoBehaviour {
 
 	//ボス撃破でCSwitch起動
 	void OnDestroy(){
-		if (level == spawns.enemy.Length-1) {
+		if (level == spawns.enemy.Length-1 && clear == true) {
 			rs.congratulations ();
 		}
 	}

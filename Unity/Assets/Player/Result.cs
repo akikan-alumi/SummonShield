@@ -35,7 +35,6 @@ public class Result : MonoBehaviour {
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
-    private bool Congratulations = false;
     private int end;
 
 	void Start ()
@@ -71,6 +70,7 @@ public class Result : MonoBehaviour {
 	
 	public void GameOver()
 	{
+		circuits = GameObject.FindGameObjectsWithTag("Circuit");
 		gameOver = true;
 		foreach (GameObject spa in spawners) {
 			Destroy(spa);
@@ -84,16 +84,10 @@ public class Result : MonoBehaviour {
 		stopFlg.sentFlg = 1;
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
-        conText.text = "Congratulations!!";
-        if (score >= levelLine[levelLine.Length - 2] ) {//levelLine[levelLine.Length-2]は6000
-            conTextObj.SetActive(true);
-        } else {
-            conTextObj.SetActive(false);
-        }
+		conTextObj.SetActive(false);
 		if((highScore < score) || (highScore == null)){
 			highScore = score;
 			PlayerPrefs.SetFloat("highScore",highScore);
-			
 		}
 	}
 
@@ -106,9 +100,22 @@ public class Result : MonoBehaviour {
 			}
 	}
 	public void congratulations () {//全クリしたら spawns.enemy.Length は6
-            Congratulations = true;
-            GameOver();
-            Debug.Log("Congratulations + 現在のlevel"+level);     
+		foreach (GameObject spa in spawners) {
+			Destroy(spa);
+		}
+
+		canvas.SetActive (false);
+		resultView.SetActive (true);	
+		stopFlg.sentFlg = 1;
+		Time.timeScale = 0;
+		scoreText.text = "score:" + strScore;
+		conText.text = "Congratulations!!";
+		conTextObj.SetActive(true);
+		if((highScore < score) || (highScore == null)){
+			highScore = score;
+			PlayerPrefs.SetFloat("highScore",highScore);
+		}        
+		Debug.Log("Congratulations + 現在のlevel"+level);     
 	}
 
 	public void setEnd (){

@@ -27,7 +27,7 @@ public class BossSpawner : MonoBehaviour {
 
         //スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
         
-            if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 4) {
+		if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 4 && GameObject.Find("BossEnemy1(Clone)") == null ) {
                 if (BossRand == 1 || result.getSentLevel() == result.spawners.Length-1) {
                     count = 0;
 
