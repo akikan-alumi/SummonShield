@@ -66,7 +66,7 @@ public class BossEnemy : MonoBehaviour {
 
 	//ボス撃破でCSwitch起動
 	void OnDestroy(){
-		//cirSwi.CSwitch();
+		rs.congratulations();
 	}
     void deathAnim() {
         myAnim.SetBool("dead", true);

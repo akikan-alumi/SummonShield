@@ -7689,13 +7689,13 @@ RectTransform:
   m_GameObject: {fileID: 264537593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.97500002, y: 2.05000067, z: 1}
   m_Children: []
   m_Father: {fileID: 1967512161}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 186.399994, y: -184.399994}
+  m_AnchoredPosition: {x: 367, y: -428}
   m_SizeDelta: {x: 341.899994, y: 87.4000015}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &264869326
@@ -23525,7 +23525,7 @@ RectTransform:
   m_GameObject: {fileID: 842994101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.06343794, y: 1.81250012, z: 1}
   m_Children: []
   m_Father: {fileID: 1967512161}
   m_RootOrder: 0
@@ -35108,13 +35108,13 @@ RectTransform:
   m_GameObject: {fileID: 1294377903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.04999876, y: 2.26249933, z: 1}
   m_Children: []
   m_Father: {fileID: 1937543980}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -313, y: 188.199997}
+  m_AnchoredPosition: {x: -778, y: 436}
   m_SizeDelta: {x: 128, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1294377905
@@ -37807,13 +37807,13 @@ RectTransform:
   m_GameObject: {fileID: 1364842129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5859369, y: 1.47675049, z: 1}
   m_Children: []
   m_Father: {fileID: 1967512161}
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -246}
   m_SizeDelta: {x: 512, y: 256}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1364842132
@@ -40146,7 +40146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 76175e96d208cd145a7b8f1806dedcd3, type: 3}
+  m_Sprite: {fileID: 21300048, guid: 5ca8c554b42f6874db10bdfb5c799967, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -40168,7 +40168,7 @@ RectTransform:
   m_GameObject: {fileID: 1430513834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1755}
-  m_LocalScale: {x: 1.73000002, y: 1, z: 1}
+  m_LocalScale: {x: 3.93574524, y: 2.48999882, z: 1}
   m_Children:
   - {fileID: 1868358523}
   - {fileID: 319348415}
@@ -40176,7 +40176,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 286, y: 187}
+  m_AnchoredPosition: {x: 713, y: 422}
   m_SizeDelta: {x: 85.3000031, y: 47.7999992}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1430898644
@@ -55099,11 +55099,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -55878,7 +55878,7 @@ RectTransform:
   m_GameObject: {fileID: 1964725169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.46249843, y: 2.63749957, z: 1}
   m_Children: []
   m_Father: {fileID: 1967512161}
   m_RootOrder: 2
@@ -56038,11 +56038,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

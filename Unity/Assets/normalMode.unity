@@ -11388,7 +11388,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 15
+  addSpeed: 50
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -14391,7 +14391,7 @@ RectTransform:
   m_GameObject: {fileID: 461766615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.20000005, y: 1, z: 1}
+  m_LocalScale: {x: 4.85924721, y: 2.4375, z: 1}
   m_Children:
   - {fileID: 212913322}
   - {fileID: 645620172}
@@ -14399,7 +14399,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 280, y: 189}
+  m_AnchoredPosition: {x: 729, y: 452}
   m_SizeDelta: {x: 85.3000031, y: 47.7999992}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &461766617
@@ -23027,11 +23027,11 @@ Prefab:
       objectReference: {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: spawnSpace
-      value: 3600
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: startTime
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: ResultObj
@@ -23212,13 +23212,13 @@ RectTransform:
   m_GameObject: {fileID: 798124720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .250000864, y: 1.27781224, z: 1}
+  m_LocalScale: {x: .60500139, y: 3.03480005, z: 1}
   m_Children: []
   m_Father: {fileID: 1511581809}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -315, y: 179}
+  m_AnchoredPosition: {x: -809, y: 395}
   m_SizeDelta: {x: 261, y: 49}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &798957502
@@ -24161,10 +24161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5c64721bf66a44d9e9c26e3f17a70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 3600
+  spawnSpace: 600
   enemy:
   - {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
-  startTime: 60
+  startTime: 5
   ResultObj: {fileID: 359353136}
 --- !u!114 &825864139
 MonoBehaviour:
@@ -45261,11 +45261,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -47638,7 +47638,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1612630826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.98000002, y: 7.15999985, z: 0}
+  m_LocalPosition: {x: -7.61000013, y: 7.15999985, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60237,7 +60237,7 @@ RectTransform:
   m_GameObject: {fileID: 2043216561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.20001602, y: 1.00001729, z: 1.00001729}
+  m_LocalScale: {x: 4.81253529, y: 2.50004172, z: 1.00001729}
   m_Children:
   - {fileID: 1118764515}
   - {fileID: 1627741676}
@@ -60245,7 +60245,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 280, y: 125}
+  m_AnchoredPosition: {x: 728, y: 317}
   m_SizeDelta: {x: 85.3000031, y: 47.7999992}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2043216563

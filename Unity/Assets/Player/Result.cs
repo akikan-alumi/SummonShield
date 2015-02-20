@@ -98,22 +98,22 @@ public class Result : MonoBehaviour {
 	}
 
 	void change(){
-        Debug.Log("Congratulations + 現在のlevel" + level);
-		if(level <= spawns.enemy.Length){
-			level++;
-        }else{
-	//		level = 0;
-		}
-        if (end >6||level>6) {//全クリしたら spawns.enemy.Length は6
+			Debug.Log ("Congratulations + 現在のlevel" + level);
+			if (level < spawns.enemy.Length) {
+					level++;
+			} else {
+					//		level = 0;
+			}
+	}
+	public void congratulations () {//全クリしたら spawns.enemy.Length は6
             Congratulations = true;
             GameOver();
-            Debug.Log("Congratulations + 現在のlevel"+level);
-        }
+            Debug.Log("Congratulations + 現在のlevel"+level);     
 	}
 
 	public void setEnd (){
 		this.end++;
-        Debug.LogError("えんｄ"+end);
+        //Debug.LogError("えんｄ"+end);
 	}
 	
 	public int getSentLevel(){
