@@ -254,6 +254,10 @@ Prefab:
       propertyPath: spaseLevel.Array.data[3]
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 11476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
+      propertyPath: speed
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
   m_RootGameObject: {fileID: 496520666}
@@ -14498,11 +14502,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.1999998
+      value: 9.30000019
       objectReference: {fileID: 0}
     - target: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.89999962
+      value: 8.60000038
       objectReference: {fileID: 0}
     - target: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -14518,11 +14522,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .920998216
+      value: .916224778
       objectReference: {fileID: 0}
     - target: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .389566839
+      value: .400664657
       objectReference: {fileID: 0}
     - target: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
       propertyPath: m_RootOrder
@@ -15370,7 +15374,6 @@ GameObject:
   - 50: {fileID: 496520671}
   - 58: {fileID: 496520670}
   - 114: {fileID: 496520669}
-  - 114: {fileID: 496520668}
   m_Layer: 0
   m_Name: speedSpawner
   m_TagString: Spawner
@@ -15390,18 +15393,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 890939465}
   m_RootOrder: 0
---- !u!114 &496520668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11472482, guid: a5eec55166b267946ac93fadfd48019b,
-    type: 2}
-  m_PrefabInternal: {fileID: 7918722}
-  m_GameObject: {fileID: 496520666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4879862a25f4349b7b27542da6bed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &496520669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15454,7 +15445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6eab6c1d9db2d4eb832b858531cf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: -20
   changeTime: 0
   changeNum: 0
 --- !u!114 &496520673
@@ -59087,7 +59078,6 @@ GameObject:
   - 50: {fileID: 2017808696}
   - 58: {fileID: 2017808695}
   - 114: {fileID: 2017808694}
-  - 114: {fileID: 2017808693}
   m_Layer: 0
   m_Name: speedSpawner
   m_TagString: Spawner
@@ -59101,24 +59091,12 @@ Transform:
   m_PrefabParentObject: {fileID: 476804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
   m_PrefabInternal: {fileID: 463093674}
   m_GameObject: {fileID: 2017808691}
-  m_LocalRotation: {x: 0, y: 0, z: .920998216, w: .389566839}
-  m_LocalPosition: {x: 10.1999998, y: 9.89999962, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .916224778, w: .400664657}
+  m_LocalPosition: {x: 9.30000019, y: 8.60000038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 890939465}
   m_RootOrder: 3
---- !u!114 &2017808693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11472482, guid: a5eec55166b267946ac93fadfd48019b,
-    type: 2}
-  m_PrefabInternal: {fileID: 463093674}
-  m_GameObject: {fileID: 2017808691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4879862a25f4349b7b27542da6bed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2017808694
 MonoBehaviour:
   m_ObjectHideFlags: 0
