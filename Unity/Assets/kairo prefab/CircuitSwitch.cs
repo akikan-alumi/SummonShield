@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//赤。青回路のOn/Off
-public class CircuitSwitch : MonoBehaviour {
-
+//赤。青回路の描画On/Off
+public class CircuitSwitch : MonoBehaviour 
+{
 	//青回路
 	[SerializeField]
 	private GameObject blueCircuit;
