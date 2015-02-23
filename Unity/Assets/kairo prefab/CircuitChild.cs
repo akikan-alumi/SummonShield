@@ -1,64 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CircuitChild : CircuitParent {
-
-	//このオブジェクトのSpriteRendererコンポーネント
-	//private SpriteRenderer spRenderer;
-	//この回路オブジェクトより下の階層にある全てのSpriteRendererコンポーネント
-	//private SpriteRenderer[] childSpRenderer;
+/// <summary>
+/// 根本から派生している回路
+/// </summary>
+public class CircuitChild : CircuitParent 
+{
+	//親のゲームオブジェクト
+	//private GameObject parent;
 
 	//一階層上のオブジェクトのSpriteRendererコンポーネント
 	private SpriteRenderer parentSpRenderer;
 
-	private GameObject parent;
-
-	//
-	void Awake() {
-
+	//スクリプト読み込み時に１度だけ処理
+	void Awake() 
+	{
 		//親オブジェクトを取得
-		parent = transform.parent.gameObject;
+		//parent = transform.parent.gameObject;
 
 		//このオブジェクトのSpriteRendererを取得
 		spRenderer = GetComponent<SpriteRenderer> ();
 
 		//一階層上のオブジェクトのSpriteRendererコンポーネントを取得
-		parentSpRenderer = parent.GetComponent<SpriteRenderer>();
+		parentSpRenderer = transform.parent.GetComponent<SpriteRenderer>();
 
 		//この回路オブジェクトより下の階層にある全てのSpriteRendererコンポーネントを取得
 		//childSpRenderer = GetComponentsInChildren <SpriteRenderer>();
 	}
 
-	void Update(){
+	//毎フレーム実行
+	void Update()
+	{
 		FadeIn ();
-		ChangeTransparency (alpha);
+		UpdateSpriteAlpha (alpha);
 		UpdateSpriteAlpha ();
 	}
 
 	/// <summary>
 	/// 親のα値以下にする
 	/// </summary>
-	private void UpdateSpriteAlpha(){
+	private void UpdateSpriteAlpha()
+	{
 		if(this.spRenderer.color.a > parentSpRenderer.color.a){
 			this.spRenderer.color = parentSpRenderer.color;
 		}
 	}
-	//エネミーと接触している間実行される　描画OFF処理
-/*	void OnTriggerStay2D(Collider2D col){
-		if (col.gameObject.CompareTag ("Enemy")) {
-			foreach(SpriteRenderer s in childSpRenderer){
-				//回路の描画をOFFにする
-				s.enabled = false;
-			}
-		}
-	}*/
-
-	//エネミーと接触しなくなった時に実行される 描画ON処理
-	/*void OnTriggerExit2D(Collider2D col){
-		if (col.gameObject.CompareTag ("Enemy") && parentSpRenderer.enabled) {
-			foreach(SpriteRenderer spr in childSpRenderer){
-				spr.enabled = true;
-			}
-		}
-	}*/
 }
