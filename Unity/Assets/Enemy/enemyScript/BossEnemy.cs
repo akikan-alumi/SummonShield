@@ -22,7 +22,7 @@ public class BossEnemy : MonoBehaviour {
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private bool clear = false;
-    public GameObject TapGraph;
+
 
 	void Awake(){
 		spawns = spawnsObj.GetComponent<Spawns> ();
@@ -46,8 +46,9 @@ public class BossEnemy : MonoBehaviour {
         myAnim = this.GetComponent<Animator>();
         deadSwitch = false;
         bgm.SetBOSSBGM();
-        if (spawns.Levels == 0) {
-            enemySield[4] = transform.FindChild("TapObject").gameObject;
+        if (rs.getSentLevel() > 0) {
+            GameObject child = gameObject.transform.FindChild("TapObject").gameObject;
+            Destroy(child.gameObject);
 
         }
     }
