@@ -3,10 +3,10 @@ using System.Collections;
 
 public class BossEnemy : MonoBehaviour {
     [SerializeField]
-    private int Hp = 10;
+    private int Hp = 12;
     [SerializeField]
     private CircleCollider2D rad;
-    public GameObject[] enemySield = new GameObject[4];
+    public GameObject[] enemySield = new GameObject[3];
 	[SerializeField]
 	private GameObject kairo;
 	private CircuitSwitch cirSwi;
@@ -23,6 +23,9 @@ public class BossEnemy : MonoBehaviour {
 	public GameObject spawnsObj;
 	private bool clear = false;
 
+    private DeathAlpha DeathA0;//死んだ時のアニメーション用
+    private DeathAlpha DeathA1;
+    private DeathAlpha DeathA2;
 
 	void Awake(){
 		spawns = spawnsObj.GetComponent<Spawns> ();
@@ -39,8 +42,11 @@ public class BossEnemy : MonoBehaviour {
         rad = GetComponent<CircleCollider2D>();
         rad.radius = 1.86f;//初期状態のコライダーのradius
         enemySield[0] = transform.FindChild("BossEnemy2").gameObject;
+        DeathA0 = enemySield[0].GetComponent<DeathAlpha>();
         enemySield[1] = transform.FindChild("BossEnemy3").gameObject;
+        DeathA1 = enemySield[1].GetComponent<DeathAlpha>();
         enemySield[2] = transform.FindChild("BossEnemy4").gameObject;
+        DeathA2 = enemySield[2].GetComponent<DeathAlpha>();
 		cirSwi.CSwitch ();
         speedAccessScript = this.GetComponent<lookat2D>();
         myAnim = this.GetComponent<Animator>();
@@ -66,14 +72,14 @@ public class BossEnemy : MonoBehaviour {
             SoundManager.Instance.PlayVoice(0);
 			clear = true;
             
-        }else if (Hp == 2) {
-            Destroy(enemySield[0].gameObject);
+        }else if (Hp <= 3) {
+            DeathA0.setSwitch();
             rad.radius = 0.65f;
-        }else if(Hp == 5){
-            Destroy(enemySield[1].gameObject);
+        }else if(Hp <= 8){
+            DeathA1.setSwitch();
             rad.radius = 1.02f;
-        }else if(Hp == 8){
-            Destroy(enemySield[2].gameObject);
+        }else if(Hp <= 11){
+            DeathA2.setSwitch();
             rad.radius = 1.28f;
         }
     }
@@ -93,7 +99,6 @@ public class BossEnemy : MonoBehaviour {
     }
 
     void Update() {
-        
         if (Hp < 1) {
             ExproAnimCount++;
             if (ExproAnimCount >= 5) {
