@@ -11452,7 +11452,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 10
+  addSpeed: 20
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -11464,6 +11464,7 @@ MonoBehaviour:
   - 6000
   - 7000
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
+  bossSpwanerObj: {fileID: 124696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
 --- !u!4 &359353138
 Transform:
   m_ObjectHideFlags: 0
@@ -22545,7 +22546,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 269, y: 275}
+  m_AnchoredPosition: {x: 350, y: 275}
   m_SizeDelta: {x: 256, y: 128}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &776940370
@@ -23042,7 +23043,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15.5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23092,6 +23093,10 @@ Prefab:
       propertyPath: ResultObj
       value: 
       objectReference: {fileID: 359353136}
+    - target: {fileID: 11415324, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
   m_RootGameObject: {fileID: 825864136}
@@ -24216,10 +24221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5c64721bf66a44d9e9c26e3f17a70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 3600
   enemy:
   - {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
-  startTime: 0
   ResultObj: {fileID: 359353136}
 --- !u!114 &825864139
 MonoBehaviour:
@@ -24266,7 +24269,7 @@ Transform:
   m_PrefabInternal: {fileID: 795888145}
   m_GameObject: {fileID: 825864136}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 15.5, z: 0}
+  m_LocalPosition: {x: 0, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 890939465}
@@ -33767,7 +33770,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -339, y: 271}
+  m_AnchoredPosition: {x: -350, y: 275}
   m_SizeDelta: {x: 256, y: 128}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1135103582

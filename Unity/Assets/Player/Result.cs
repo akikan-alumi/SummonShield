@@ -36,9 +36,11 @@ public class Result : MonoBehaviour {
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
     private int end;
-
-	void Start ()
-	{
+	public GameObject bossSpwanerObj;
+	private BossSpawner bossSpawner; 
+		
+	void Start(){
+		bossSpawner = bossSpwanerObj.GetComponent<BossSpawner> ();
 		spawns = spawnsObj.GetComponent<Spawns> ();
 		highScore = PlayerPrefs.GetFloat ("highScore");
 		//enemySu = spawns.sentEnemy;
@@ -60,8 +62,9 @@ public class Result : MonoBehaviour {
 			score = tempScore * addSpeed; 
 			strScore = score.ToString("F0");
 			nowScoreText.text = "" + strScore;
-			if(score >= levelLine[level] ){
-				change();
+			if(score >= levelLine[level] && GameObject.Find("BossEnemy1(Clone)") == null ){
+				bossSpawner.bossSpawn();
+				//change();
 				Debug.Log ("level"+level);
 			}
 			//Debug.Log (dateTime);
@@ -73,7 +76,7 @@ public class Result : MonoBehaviour {
 		circuits = GameObject.FindGameObjectsWithTag("Circuit");
 		gameOver = true;
 		foreach (GameObject spa in spawners) {
-			Destroy(spa);
+			//Destroy(spa);
 		}
 		foreach (GameObject cir in circuits) {
 			Destroy(cir);
@@ -91,7 +94,7 @@ public class Result : MonoBehaviour {
 		}
 	}
 
-	void change(){
+	public void change(){
 			Debug.Log ("Congratulations + 現在のlevel" + level);
 			if (level < spawns.enemy.Length -1) {
 					level++;

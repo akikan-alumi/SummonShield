@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.CompareTag("Enemy")) { // Enemyに当たったらゲームオーバーをTrueに
             SoundManager.Instance.StopBGM();
             SoundManager.Instance.PlaySE(4);
-			Destroy(col.gameObject);
+			//Destroy(col.gameObject);
 			finish.GameOver();
 		}
 	}

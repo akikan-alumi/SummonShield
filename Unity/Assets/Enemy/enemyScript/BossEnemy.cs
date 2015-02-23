@@ -77,7 +77,10 @@ public class BossEnemy : MonoBehaviour {
 	void OnDestroy(){
 		if (level == spawns.enemy.Length-1 && clear == true) {
 			rs.congratulations ();
+		}else{
+			rs.change();
 		}
+
 	}
     void deathAnim() {
         myAnim.SetBool("dead", true);

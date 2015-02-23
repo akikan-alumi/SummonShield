@@ -57,9 +57,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5c64721bf66a44d9e9c26e3f17a70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSpace: 3600
-  enemy: []
-  startTime: 60
+  enemy:
+  - {fileID: 144598, guid: 86514412cb904774b9676bdba94c975d, type: 2}
   ResultObj: {fileID: 0}
 --- !u!114 &11424700
 MonoBehaviour:
