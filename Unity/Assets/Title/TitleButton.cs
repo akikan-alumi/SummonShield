@@ -17,7 +17,7 @@ public class TitleButton : MonoBehaviour {
 			CreditText.SetActive(true); 
 			TriggerSwitch = true;
 			Debug.Log ("ON");
-
+            SoundManager.Instance.PlaySE(0);
             //クレジット開いたまま別シーンに移動させないコード
             NormalModeButton.SetActive(false);
 		}else if(TriggerSwitch == true){
@@ -25,7 +25,7 @@ public class TitleButton : MonoBehaviour {
 			CreditText.SetActive(false); 
 			TriggerSwitch = false;
 			Debug.Log ("OFF");
-
+            SoundManager.Instance.PlaySE(0);
             //クレジット閉じていたら別シーンに移動させることが出来るコード
             NormalModeButton.SetActive(true);
 		}

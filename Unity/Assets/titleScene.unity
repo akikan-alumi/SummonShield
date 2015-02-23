@@ -10525,7 +10525,7 @@ RectTransform:
   m_GameObject: {fileID: 356880360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.63000011, y: 17.1499996, z: 1}
+  m_LocalScale: {x: 12.6999998, y: 29.7950954, z: 1}
   m_Children:
   - {fileID: 1397582751}
   m_Father: {fileID: 1967512161}
@@ -13055,9 +13055,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30BD\u30FC\u30B9\u30B3\u30FC\u30C9\r\n\u30B8\u30FC\u30AF\u30B9\u30FB\u30E9\u30DC\u300CSoundManager.cs\u300D\r\n\t<http://zyyxlabo.blogspot.jp/2013/03/unitysoundmanager-ver.html>\r\n\r\n\uFF22\uFF27\uFF2D\r\n\u30FB\u9B54\u738B\u9B42\u300C\u30B5\u30A4\u30D0\u30FC\uFF11\u300D\r\n\t<http://maoudamashii.jokersounds.com/>\r\n\u30FBCyber-Rainforce/3104\u5F0F\u300C\u771F\u5B9F\u300D\r\n\t<http://cyber-rainforce.net/>\r\n\r\n\uFF33\u3000\uFF25\u3000\r\nMusic
-    is VFR\u300CCyber03-02\u300D\r\n\t<http://musicisvfr.com/>\r\nAFFEXCEED\u300CU2_096\u300D\u53CA\u3073\u300CU1_085\u300D\r\n\t<http://affexceed.art.coocan.jp/>\r\n\u515C\u866B\u3068\u30D1\u30F3\u30B1\u30FC\u30AD\u300C\u7206\u767A\u97F3010\u300D\uFF0B\u300C\u7206\u767A\u97F3014\u300D\r\n\t<
-    http://beetlepancake.web.fc2.com/>\r\n\t\r\n\u753B\u3000\u50CF\u3000\u30CB\u30B3\u30CB\u30FB\u30B3\u30E2\u30F3\u30BA\u300C\u30B5\u30A4\u30D0\u30FC\u80CC\u666F\u3042\u306A\u3056\u30FC\uFF12\u300D\r\n\t<http://commons.nicovideo.jp/material/nc89087>"
+  m_Text: "\uFF22\uFF27\uFF2D\r\n\u9B54\u738B\u9B42\u300C\u30B5\u30A4\u30D0\u30FC\uFF11\u300D\r\n\thttp://maoudamashii.jokersounds.com/\nCyber-Rainforce/3104\u5F0F\u300C\u771F\u5B9F\u300D\r\n\thttp://cyber-rainforce.net/\n\r\n\uFF33\u3000\uFF25\u3000\r\nMusic
+    is VFR\u300CCyber03-02\u300D\r\n\thttp://musicisvfr.com/\nAFFEXCEED\u300CU2_096\u300D\u53CA\u3073\u300CU1_085\u300D\r\n\thttp://affexceed.art.coocan.jp/\n\u515C\u866B\u3068\u30D1\u30F3\u30B1\u30FC\u30AD\u300C\u7206\u767A\u97F3010\u300D\uFF0B\u300C\u7206\u767A\u97F3014\u300D\r\n\thttp://beetlepancake.web.fc2.com/\n\t\r\n\u753B\u3000\u50CF\u3000\u30CB\u30B3\u30CB\u30FB\u30B3\u30E2\u30F3\u30BA\u300C\u30B5\u30A4\u30D0\u30FC\u80CC\u666F\u3042\u306A\u3056\u30FC\uFF12\u300D\r\n\thttp://commons.nicovideo.jp/material/nc89087"
 --- !u!222 &456226249
 CanvasRenderer:
   m_ObjectHideFlags: 0

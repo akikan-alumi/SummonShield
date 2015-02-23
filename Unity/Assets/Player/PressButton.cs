@@ -36,13 +36,13 @@ public class PressButton : MonoBehaviour {
 			Time.timeScale = 0;
 			stopMenu.SetActive(true);
 			Debug.Log("Stop!");
-		
+            SoundManager.Instance.PlaySE(0);
 		} else {
 			stopFlg.sentFlg = 0;
 			Time.timeScale = 1;
 			stopMenu.SetActive(false);
 			Debug.Log("Start!");
-		
+            SoundManager.Instance.PlaySE(0);
 		}
 	}
 
@@ -52,6 +52,7 @@ public class PressButton : MonoBehaviour {
 	public void PressButtonTitle(){
         SoundManager.Instance.StopBGM();
 		Debug.Log ("Press Button Title");
+        SoundManager.Instance.PlaySE(0);
 		Application.LoadLevel("titleScene");
 	}
 
@@ -61,6 +62,7 @@ public class PressButton : MonoBehaviour {
 	public void PressButtonRetry(){
         SoundManager.Instance.StopBGM();
 		Debug.Log ("Press Button Retry");
+        SoundManager.Instance.PlaySE(0);
 		stopFlg.sentFlg = 0;
 		Time.timeScale = 1;
 		Application.LoadLevel("normalMode");
