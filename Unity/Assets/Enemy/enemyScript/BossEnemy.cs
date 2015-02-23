@@ -6,7 +6,7 @@ public class BossEnemy : MonoBehaviour {
     private int Hp = 10;
     [SerializeField]
     private CircleCollider2D rad;
-    public GameObject[] enemySield = new GameObject[3];
+    public GameObject[] enemySield = new GameObject[4];
 	[SerializeField]
 	private GameObject kairo;
 	private CircuitSwitch cirSwi;
@@ -22,6 +22,7 @@ public class BossEnemy : MonoBehaviour {
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private bool clear = false;
+    public GameObject TapGraph;
 
 	void Awake(){
 		spawns = spawnsObj.GetComponent<Spawns> ();
@@ -45,7 +46,10 @@ public class BossEnemy : MonoBehaviour {
         myAnim = this.GetComponent<Animator>();
         deadSwitch = false;
         bgm.SetBOSSBGM();
+        if (spawns.Levels == 0) {
+            enemySield[4] = transform.FindChild("TapObject").gameObject;
 
+        }
     }
 
     public void setHP() {//HPに応じてコライダー２Dの範囲を減らしていく

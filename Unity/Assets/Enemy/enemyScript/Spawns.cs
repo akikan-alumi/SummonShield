@@ -48,5 +48,7 @@ public class Spawns : MonoBehaviour {
 	public GameObject[] Enemy{
 		get{return enemy;}
 	}
-
+    public int Levels {
+        get { return level; }
+    }
 }
