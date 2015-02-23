@@ -11452,7 +11452,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 10
+  addSpeed: 20
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -22545,7 +22545,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 269, y: 275}
+  m_AnchoredPosition: {x: 350, y: 275}
   m_SizeDelta: {x: 256, y: 128}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &776940370
@@ -33767,7 +33767,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -339, y: 271}
+  m_AnchoredPosition: {x: -350, y: 275}
   m_SizeDelta: {x: 256, y: 128}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1135103582

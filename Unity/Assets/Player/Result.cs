@@ -36,9 +36,10 @@ public class Result : MonoBehaviour {
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
     private int end;
-
-	void Start ()
-	{
+	public GameObject bossSpwaner;
+	private BossSpawaner bossSpawner; 
+		
+	void Start(){
 		spawns = spawnsObj.GetComponent<Spawns> ();
 		highScore = PlayerPrefs.GetFloat ("highScore");
 		//enemySu = spawns.sentEnemy;
@@ -61,7 +62,8 @@ public class Result : MonoBehaviour {
 			strScore = score.ToString("F0");
 			nowScoreText.text = "" + strScore;
 			if(score >= levelLine[level] ){
-				change();
+
+				//change();
 				Debug.Log ("level"+level);
 			}
 			//Debug.Log (dateTime);
@@ -73,7 +75,7 @@ public class Result : MonoBehaviour {
 		circuits = GameObject.FindGameObjectsWithTag("Circuit");
 		gameOver = true;
 		foreach (GameObject spa in spawners) {
-			Destroy(spa);
+			//Destroy(spa);
 		}
 		foreach (GameObject cir in circuits) {
 			Destroy(cir);

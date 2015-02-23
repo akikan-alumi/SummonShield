@@ -21,24 +21,24 @@ public class BossSpawner : MonoBehaviour {
         result = ResultObj.GetComponent<Result>();
     }
 	// Update is called once per frame
-	void Update () {
-		count++;
-		nowTime += Time.deltaTime;
+	public void bossSpawn () {
+		//count++;
+		//nowTime += Time.deltaTime;
 
         //スポーン間隔を満たしたら && 一時停止状態じゃないときスポーンする
         
-		if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 4 && GameObject.Find("BossEnemy1(Clone)") == null ) {
-                if (BossRand == 1 || result.getSentLevel() == result.spawners.Length-1) {
-                    count = 0;
-
-                    Instantiate(enemy[0], this.transform.position, this.transform.rotation);
-                }
-                BossRand = Random.Range(0, 2);
-            }
-            else if (Time.timeScale != 1) {
-                count = 0;
-                BossRand = Random.Range(0, 2);
-            }
+		//if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && result.getSentLevel() != 4 && GameObject.Find("BossEnemy1(Clone)") == null ) {
+        //        if (BossRand == 1 || result.getSentLevel() == result.spawners.Length-1) {
+        //            count = 0;
+		//
+        Instantiate(enemy[0], this.transform.position, this.transform.rotation);
+        //        }
+        //        BossRand = Random.Range(0, 2);
+        //    }
+        //    else if (Time.timeScale != 1) {
+        //        count = 0;
+        //        BossRand = Random.Range(0, 2);
+        //    }
         }
 	
 }
