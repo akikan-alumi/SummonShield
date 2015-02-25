@@ -35502,6 +35502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClickObj: {fileID: 142178, guid: 504822fd9239e0045b98cab7b37a8dc7, type: 2}
   stopMenu: {fileID: 0}
+  ResultObj: {fileID: 0}
 --- !u!4 &1305781706
 Transform:
   m_ObjectHideFlags: 0

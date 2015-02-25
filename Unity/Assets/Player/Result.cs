@@ -30,6 +30,7 @@ public class Result : MonoBehaviour {
 	[SerializeField]
 	private GameObject ClickObj;
 	public float[] levelLine = {1000,2000,3000,4000,5000,6000,7000};
+	private float line = 0;
 	private int level = 0;
 	//private int enemySu;
 	private Spawns spawns;
@@ -38,8 +39,16 @@ public class Result : MonoBehaviour {
     private int end;
 	public GameObject bossSpwanerObj;
 	private BossSpawner bossSpawner; 
+	private static int conLevel;
+
+	void Awake(){
+		if (conLevel != null) {
+			level = conLevel;
+		}
+	}
 		
 	void Start(){
+		line += levelLine [level];
 		bossSpawner = bossSpwanerObj.GetComponent<BossSpawner> ();
 		spawns = spawnsObj.GetComponent<Spawns> ();
 		highScore = PlayerPrefs.GetFloat ("highScore");
@@ -62,7 +71,7 @@ public class Result : MonoBehaviour {
 			score = tempScore * addSpeed; 
 			strScore = score.ToString("F0");
 			nowScoreText.text = "" + strScore;
-			if(score >= levelLine[level] && GameObject.Find("BossEnemy1(Clone)") == null ){
+			if(score >= line && GameObject.Find("BossEnemy1(Clone)") == null ){
 				bossSpawner.bossSpawn();
 				//change();
 				Debug.Log ("level"+level);
@@ -98,6 +107,7 @@ public class Result : MonoBehaviour {
 			Debug.Log ("Congratulations + 現在のlevel" + level);
 			if (level < spawns.enemy.Length -1) {
 					level++;
+					line += levelLine [level];
 			} else {
 					//		level = 0;
 			}
@@ -119,6 +129,14 @@ public class Result : MonoBehaviour {
 			PlayerPrefs.SetFloat("highScore",highScore);
 		}        
 		Debug.Log("Congratulations + 現在のlevel"+level);     
+	}
+
+	public void continueGame(){
+		conLevel = level;
+	}
+
+	public void reset(){
+		conLevel = 0;
 	}
 
 	public void setEnd (){

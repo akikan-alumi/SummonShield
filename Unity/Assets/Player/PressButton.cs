@@ -13,9 +13,13 @@ public class PressButton : MonoBehaviour {
 	/// </summary>
 	[SerializeField]
 	private GameObject stopMenu;
+	[SerializeField]
+	private GameObject ResultObj;
+	private Result rs;
 
 	void Start(){
 		stopFlg = ClickObj.GetComponent<ClickPositionCreatePrefabScript> ();
+		rs = ResultObj.GetComponent<Result> ();
 	}
 
 	/// <summary>
@@ -50,6 +54,7 @@ public class PressButton : MonoBehaviour {
 	/// TitleButtonが押されたらTITLESceneに移動する
 	/// </summary>
 	public void PressButtonTitle(){
+		rs.reset ();
         SoundManager.Instance.StopBGM();
 		Debug.Log ("Press Button Title");
         SoundManager.Instance.PlaySE(0);
@@ -60,9 +65,20 @@ public class PressButton : MonoBehaviour {
 	/// RetryButtonが押されたらScene再読み込み
 	/// </summary>
 	public void PressButtonRetry(){
+		rs.reset ();
         SoundManager.Instance.StopBGM();
 		Debug.Log ("Press Button Retry");
         SoundManager.Instance.PlaySE(0);
+		stopFlg.sentFlg = 0;
+		Time.timeScale = 1;
+		Application.LoadLevel("normalMode");
+	}
+
+	public void PressContinueButton(){
+		rs.continueGame ();
+		SoundManager.Instance.StopBGM();
+		Debug.Log ("Press Button Continue");
+		SoundManager.Instance.PlaySE(0);
 		stopFlg.sentFlg = 0;
 		Time.timeScale = 1;
 		Application.LoadLevel("normalMode");
