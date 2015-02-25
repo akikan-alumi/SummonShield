@@ -30,7 +30,7 @@ public class BossSpawner : MonoBehaviour {
         //        if (BossRand == 1 || result.getSentLevel() == result.spawners.Length-1) {
         //            count = 0;
 		if(GameObject.Find("BossEnemy1(Clone)") == null){ 
-        	Instantiate(enemy[level], this.transform.position, this.transform.rotation);
+        	Instantiate(enemy[level], this.transform.localPosition, this.transform.localRotation);
 		}
 		//        }
         //        BossRand = Random.Range(0, 2);

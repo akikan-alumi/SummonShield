@@ -52,11 +52,11 @@ public class BossEnemy : MonoBehaviour {
         myAnim = this.GetComponent<Animator>();
         deadSwitch = false;
         bgm.SetBOSSBGM();
-        if (rs.getSentLevel() > 0) {
+        /*if (rs.getSentLevel() > 0) {
             GameObject child = gameObject.transform.FindChild("TapObject").gameObject;
             Destroy(child.gameObject);
 
-        }
+        }*/
     }
 
     public void setHP() {//HPに応じてコライダー２Dの範囲を減らしていく
