@@ -1,36 +1,31 @@
 fileFormatVersion: 2
-guid: 319c06660032b2d4694b7afc1b3d777d
+guid: 946c2795fd937204bb903dcebe547b6c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: TapWave_0
-    21300002: TapWave_1
-    21300004: TapWave_2
-    21300006: TapWave_3
-    21300008: TapWave_4
-    21300010: TapWave_5
-    21300012: TapWave_6
-    21300014: TapWave_7
-    21300016: TapWave_8
-    21300018: TapWave_9
-    21300020: TapWave_10
-    21300022: TapWave_11
-    21300024: TapWave_12
-    21300026: TapWave_13
-    21300028: TapWave_14
-    21300030: TapWave_15
-    21300032: TapWave_16
-    21300034: TapWave_17
-    21300036: TapWave_18
-    21300038: TapWave_19
-    21300040: TapWave_20
-    21300042: TapWave_21
-    21300044: TapWave_22
-    21300046: TapWave_23
-    21300048: TapWave_24
-    21300050: TapWave_25
-    21300052: TapWave_26
-    21300054: TapWave_27
-    21300056: TapWave_28
+    21300000: TapWave0_0
+    21300002: TapWave0_1
+    21300004: TapWave0_2
+    21300006: TapWave0_3
+    21300008: TapWave0_4
+    21300010: TapWave0_5
+    21300012: TapWave0_6
+    21300014: TapWave0_7
+    21300016: TapWave0_8
+    21300018: TapWave0_9
+    21300020: TapWave0_10
+    21300022: TapWave0_11
+    21300024: TapWave0_12
+    21300026: TapWave0_13
+    21300028: TapWave0_14
+    21300030: TapWave0_15
+    21300032: TapWave0_16
+    21300034: TapWave0_17
+    21300036: TapWave0_18
+    21300038: TapWave0_19
+    21300040: TapWave0_20
+    21300042: TapWave0_21
+    21300044: TapWave0_22
+    21300046: TapWave0_23
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -72,7 +67,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: TapWave_0
+    - name: TapWave0_0
       rect:
         serializedVersion: 2
         x: 0
@@ -80,9 +75,9 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_1
+    - name: TapWave0_1
       rect:
         serializedVersion: 2
         x: 256
@@ -90,9 +85,9 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_2
+    - name: TapWave0_2
       rect:
         serializedVersion: 2
         x: 512
@@ -100,9 +95,9 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_3
+    - name: TapWave0_3
       rect:
         serializedVersion: 2
         x: 768
@@ -110,9 +105,9 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_4
+    - name: TapWave0_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -120,9 +115,9 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_5
+    - name: TapWave0_5
       rect:
         serializedVersion: 2
         x: 0
@@ -132,7 +127,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_6
+    - name: TapWave0_6
       rect:
         serializedVersion: 2
         x: 256
@@ -142,7 +137,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_7
+    - name: TapWave0_7
       rect:
         serializedVersion: 2
         x: 512
@@ -152,7 +147,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_8
+    - name: TapWave0_8
       rect:
         serializedVersion: 2
         x: 768
@@ -162,7 +157,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_9
+    - name: TapWave0_9
       rect:
         serializedVersion: 2
         x: 1024
@@ -172,7 +167,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_10
+    - name: TapWave0_10
       rect:
         serializedVersion: 2
         x: 0
@@ -182,7 +177,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_11
+    - name: TapWave0_11
       rect:
         serializedVersion: 2
         x: 256
@@ -192,7 +187,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_12
+    - name: TapWave0_12
       rect:
         serializedVersion: 2
         x: 512
@@ -202,7 +197,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_13
+    - name: TapWave0_13
       rect:
         serializedVersion: 2
         x: 768
@@ -212,7 +207,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_14
+    - name: TapWave0_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -222,7 +217,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_15
+    - name: TapWave0_15
       rect:
         serializedVersion: 2
         x: 0
@@ -232,7 +227,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_16
+    - name: TapWave0_16
       rect:
         serializedVersion: 2
         x: 256
@@ -242,7 +237,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_17
+    - name: TapWave0_17
       rect:
         serializedVersion: 2
         x: 512
@@ -252,7 +247,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_18
+    - name: TapWave0_18
       rect:
         serializedVersion: 2
         x: 768
@@ -262,7 +257,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_19
+    - name: TapWave0_19
       rect:
         serializedVersion: 2
         x: 1024
@@ -270,9 +265,9 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_20
+    - name: TapWave0_20
       rect:
         serializedVersion: 2
         x: 0
@@ -282,7 +277,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_21
+    - name: TapWave0_21
       rect:
         serializedVersion: 2
         x: 256
@@ -292,7 +287,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_22
+    - name: TapWave0_22
       rect:
         serializedVersion: 2
         x: 512
@@ -300,67 +295,27 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_23
+    - name: TapWave0_23
       rect:
         serializedVersion: 2
-        x: 768
+        x: 765
         y: 256
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_24
+    - name: 
       rect:
         serializedVersion: 2
         x: 1024
-        y: 256
+        y: 258
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_25
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_26
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_27
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TapWave_28
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

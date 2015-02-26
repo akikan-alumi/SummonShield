@@ -4,6 +4,7 @@ using System.Collections;
 public class ClickPositionCreatePrefabScript : MonoBehaviour {
 	// 生成したいPrefab
 	public GameObject Prefab;
+    public GameObject PrefabEf;
 	private int stopFlg = 0; 
 
 	[SerializeField]
@@ -43,7 +44,7 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 				// オブジェクト生成 : オブジェクト(GameObject), 位置(Vector3), 角度(Quaternion)
 				// ScreenToWorldPoint(位置(Vector3))：スクリーン座標をワールド座標に変換する
 				Instantiate(Prefab, clickPosition, Prefab.transform.rotation);
-				//ButtunCountAdd
+                Instantiate(PrefabEf,clickPosition,PrefabEf.transform.rotation);
 
 			}
 
