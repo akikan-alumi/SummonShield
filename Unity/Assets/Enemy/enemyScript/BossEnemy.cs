@@ -21,6 +21,8 @@ public class BossEnemy : MonoBehaviour {
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private bool clear = false;
+    public GameObject BossSpawnerObj;
+    private BossSpawner BS;
 
     private DeathAlpha DeathA0;//死んだ時のアニメーション用
     private DeathAlpha DeathA1;
@@ -34,7 +36,7 @@ public class BossEnemy : MonoBehaviour {
 		cirSwi = kairo.GetComponent<CircuitSwitch>();
         bgm = GameObject.Find("BGMobject").GetComponent<BGM>();
 		level = rs.getSentLevel();
-
+        BS = BossSpawnerObj.GetComponent<BossSpawner>();
 	}
 
     void Start() {

@@ -98,7 +98,7 @@ public class Result : MonoBehaviour {
 
 	public void change(){
 			Debug.Log ("Congratulations + 現在のlevel" + level);
-			if (level < spawns.enemy.Length -1) {
+			if (level < spawns.enemy.Length) {
 					level++;
 			line = score + levelLine[level];
 			} else {

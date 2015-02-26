@@ -213,7 +213,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 1d8b5efde4d53b948b36b6da2d740b54, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 1d8b5efde4d53b948b36b6da2d740b54, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -262,6 +263,7 @@ MonoBehaviour:
   kairo: {fileID: 0}
   explosion: {fileID: 132372, guid: a188733c6e68d6441a44c06bd5b1a30e, type: 2}
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
+  BossSpawnerObj: {fileID: 124696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
 --- !u!114 &11450816
 MonoBehaviour:
   m_ObjectHideFlags: 1
