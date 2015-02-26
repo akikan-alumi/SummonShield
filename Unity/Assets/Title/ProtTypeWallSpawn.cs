@@ -4,8 +4,7 @@ using System.Collections;
 public class ProtTypeWallSpawn : MonoBehaviour {
     
     //Playerと自動生成するWall
-    [SerializeField]
-    private GameObject player,Wall;
+    public GameObject player,Wall;
 
     //Wallが生成される座標
     private Vector3 spawnPoint;
