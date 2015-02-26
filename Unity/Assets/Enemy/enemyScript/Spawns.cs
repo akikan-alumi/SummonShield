@@ -33,7 +33,7 @@ public class Spawns : MonoBehaviour {
 		if (count >= spawnSpace && Time.timeScale != 0 && nowTime >= (float)startTime && GameObject.Find("BossEnemy1") == null ) {
 						
 			count = 0;
-			Instantiate (enemy[level], this.transform.position, this.transform.rotation);
+			Instantiate (enemy[level], this.transform.localPosition, this.transform.localRotation);
 			//Debug.Log (level);
 				
 		} else if(Time.timeScale != 1){
