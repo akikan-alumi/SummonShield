@@ -11457,12 +11457,12 @@ MonoBehaviour:
   ClickObj: {fileID: 1383108575}
   levelLine:
   - 1000
-  - 2500
-  - 4000
-  - 5500
-  - 7000
-  - 8500
-  - 10000
+  - 1000
+  - 1100
+  - 500
+  - 1100
+  - 1200
+  - 1000
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
   bossSpwanerObj: {fileID: 124696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
 --- !u!4 &359353138

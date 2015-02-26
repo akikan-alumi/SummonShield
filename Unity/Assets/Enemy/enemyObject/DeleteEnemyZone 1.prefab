@@ -52,7 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  Wall: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
+  wall: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
+  tapEffect: {fileID: 100080, guid: 44e0824b0e64707438588ca531297f1d, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
