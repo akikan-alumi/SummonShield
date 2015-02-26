@@ -5865,8 +5865,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 899069899}
-  wall: {fileID: 0}
-  tapEffect: {fileID: 0}
+  wall: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
+  tapEffect: {fileID: 100080, guid: 44e0824b0e64707438588ca531297f1d, type: 2}
 --- !u!61 &186448883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31259,6 +31259,14 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 899069899}
+    - target: {fileID: 11457806, guid: 86c6dae2c5fec624bbafd5af69b04fbf, type: 2}
+      propertyPath: tapEffect
+      value: 
+      objectReference: {fileID: 100080, guid: 44e0824b0e64707438588ca531297f1d, type: 2}
+    - target: {fileID: 11457806, guid: 86c6dae2c5fec624bbafd5af69b04fbf, type: 2}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86c6dae2c5fec624bbafd5af69b04fbf, type: 2}
   m_RootGameObject: {fileID: 186448881}
