@@ -50,9 +50,7 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
 
         }
 	}
-	public void getFlg (int stopFrg){
-		this.stopFlg = stopFlg;
-	}
+
 
 	public int sentFlg{
 		get{return stopFlg;}

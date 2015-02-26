@@ -80,9 +80,6 @@ public class Result : MonoBehaviour {
 	{
 		circuits = GameObject.FindGameObjectsWithTag("Circuit");
 		gameOver = true;
-		foreach (GameObject spa in spawners) {
-			//Destroy(spa);
-		}
 		foreach (GameObject cir in circuits) {
 			Destroy(cir);
 		}
