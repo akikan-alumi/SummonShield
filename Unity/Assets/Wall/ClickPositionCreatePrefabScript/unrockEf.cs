@@ -3,18 +3,11 @@ using System.Collections;
 
 public class unrockEf : MonoBehaviour {
 
-	void OnAnimationFinish(){
+    void OnAnimationFinish() {
 		Destroy (gameObject);
 	}
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Start() {
+        Destroy(gameObject, 0.5f);
+    }
 
 }
