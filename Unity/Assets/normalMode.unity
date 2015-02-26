@@ -11458,11 +11458,11 @@ MonoBehaviour:
   levelLine:
   - 1000
   - 2500
-  - 4500
-  - 6000
-  - 7500
-  - 9000
-  - 10500
+  - 4000
+  - 5500
+  - 7000
+  - 8500
+  - 10000
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
   bossSpwanerObj: {fileID: 124696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
 --- !u!4 &359353138
