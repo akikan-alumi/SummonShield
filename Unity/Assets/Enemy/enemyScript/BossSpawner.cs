@@ -10,7 +10,7 @@ public class BossSpawner : MonoBehaviour {
     private int endCount;
     void Start() {
         result = ResultObj.GetComponent<Result>();
-        endCount = 0;
+       // endCount = 0;
     }
 
 	void Update(){
@@ -18,9 +18,10 @@ public class BossSpawner : MonoBehaviour {
 		}
 	// ボスをスポーンさせる
 	public void bossSpawn () {
-		if(GameObject.Find("BossEnemy1(Clone)") == null && endCount<6){ 
+		Debug.Log ("endCount:"+endCount);
+		if(GameObject.Find("BossEnemy1(Clone)") == null /*&& endCount<6*/){ 
         	Instantiate(enemy[level], this.transform.localPosition, this.transform.localRotation);
-            endCount++;
+           // endCount++;
 		}
      }
 }

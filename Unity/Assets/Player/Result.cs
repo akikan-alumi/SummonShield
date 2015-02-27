@@ -16,10 +16,10 @@ public class Result : MonoBehaviour {
 	private GameObject canvas;
 	[SerializeField]
 	private GameObject nowScoreTextObj;
-    public GameObject conTextObj;
+	public GameObject conTextObj;
 	private Text nowScoreText;
 	private Text scoreText;
-    private Text conText;
+	private Text conText;
 	[SerializeField]
 	private float addSpeed = 0.125f;
 	public GameObject[] spawners;
@@ -36,14 +36,23 @@ public class Result : MonoBehaviour {
 	private Spawns spawns;
 	public GameObject spawnsObj;
 	private GameObject[] circuits;
-    private int end;
+	private int end;
 	public GameObject bossSpwanerObj;
 	private BossSpawner bossSpawner; 
-
+	private static int conLevel;
+	private bool lastFlg = false;
+	
 	void Awake(){
+		score = 0;
+		level = 0;
+		line = 0;
+		if (conLevel != null) {
+			level = conLevel;
+		}
 		line = score + levelLine [level];
+		Debug.Log (level);
 	}
-		
+	
 	void Start(){
 		bossSpawner = bossSpwanerObj.GetComponent<BossSpawner> ();
 		spawns = spawnsObj.GetComponent<Spawns> ();
@@ -55,7 +64,7 @@ public class Result : MonoBehaviour {
 		gameOver = false;
 		spawners = GameObject.FindGameObjectsWithTag("Spawner");
 		circuits = GameObject.FindGameObjectsWithTag("Circuit");
-        conText = conTextObj.GetComponent<Text>();
+		conText = conTextObj.GetComponent<Text>();
 		
 	}
 	
@@ -67,10 +76,14 @@ public class Result : MonoBehaviour {
 			score = tempScore * addSpeed; 
 			strScore = score.ToString("F0");
 			nowScoreText.text = "" + strScore;
-			if(score >= line && GameObject.Find("BossEnemy1(Clone)") == null ){
+			if(score >= line && GameObject.Find("BossEnemy1(Clone)") == null && lastFlg == false){
 				bossSpawner.bossSpawn();
+				if(level == spawns.enemy.Length-1){
+					lastFlg = true;
+				}
 				//change();
 				Debug.Log ("level"+level);
+				Debug.Log ("line"+line);
 			}
 			//Debug.Log (dateTime);
 		}
@@ -85,7 +98,7 @@ public class Result : MonoBehaviour {
 		}
 		canvas.SetActive (false);
 		resultView.SetActive (true);
-
+		
 		stopFlg.sentFlg = 1;
 		Time.timeScale = 0;
 		scoreText.text = "score:" + strScore;
@@ -94,22 +107,27 @@ public class Result : MonoBehaviour {
 			highScore = score;
 			PlayerPrefs.SetFloat("highScore",highScore);
 		}
+		conLevel = level;
+		Debug.Log ("level"+level);
+		Debug.Log ("line"+line);
+		Debug.Log ("conLevel:" + conLevel);
 	}
-
+	
 	public void change(){
-			Debug.Log ("Congratulations + 現在のlevel" + level);
-			if (level < spawns.enemy.Length) {
-					level++;
+		Debug.Log ("Congratulations + 現在のlevel" + level);
+		if (level < spawns.enemy.Length) {
+			level++;
 			line = score + levelLine[level];
-			} else {
-					//		level = 0;
-			}
+			Debug.Log ("conLevel:" + conLevel);
+		} else {
+			//		level = 0;
+		}
 	}
 	public void congratulations () {//全クリしたら spawns.enemy.Length は6
 		foreach (GameObject spa in spawners) {
 			Destroy(spa);
 		}
-
+		
 		canvas.SetActive (false);
 		resultView.SetActive (true);	
 		stopFlg.sentFlg = 1;
@@ -123,15 +141,18 @@ public class Result : MonoBehaviour {
 		}        
 		Debug.Log("Congratulations + 現在のlevel"+level);     
 	}
-
+	
 	public void setEnd (){
 		this.end++;
-        //Debug.LogError("えんｄ"+end);
+		//Debug.LogError("えんｄ"+end);
 	}
 	
 	public int getSentLevel(){
-        return level;
+		return level;
 	}
-
+	
+	public void reset(){
+		conLevel = 0;
+	}
 	
 }
