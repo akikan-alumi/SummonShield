@@ -127,7 +127,7 @@ public class Result : MonoBehaviour {
 		foreach (GameObject spa in spawners) {
 			Destroy(spa);
 		}
-		
+		conLevel = 0;
 		canvas.SetActive (false);
 		resultView.SetActive (true);	
 		stopFlg.sentFlg = 1;
