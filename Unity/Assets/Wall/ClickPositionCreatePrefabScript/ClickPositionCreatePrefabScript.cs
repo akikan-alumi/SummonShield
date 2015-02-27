@@ -43,7 +43,9 @@ public class ClickPositionCreatePrefabScript : MonoBehaviour {
             clickPosition.z = 0f;
             // オブジェクト生成 : オブジェクト(GameObject), 位置(Vector3), 角度(Quaternion)
             // ScreenToWorldPoint(位置(Vector3))：スクリーン座標をワールド座標に変換する
-            Instantiate(PrefabEf, clickPosition, PrefabEf.transform.rotation);//エフェクト
+            if (Time.timeScale != 0) {
+                Instantiate(PrefabEf, clickPosition, PrefabEf.transform.rotation);//エフェクト
+            }
             if ((targets.Length < spawnMax) && (stopFlg == 0)) {
                 Instantiate(Prefab, clickPosition, Prefab.transform.rotation);//オブジェクト
             }

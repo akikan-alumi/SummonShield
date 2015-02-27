@@ -26608,7 +26608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 899069899}
   wall: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
-  tapEffect: {fileID: 100080, guid: 44e0824b0e64707438588ca531297f1d, type: 2}
+  tapEffect: {fileID: 161054, guid: 75a85a20f31a96f419c8f0dd9ec74c93, type: 2}
 --- !u!1 &964467471
 GameObject:
   m_ObjectHideFlags: 0

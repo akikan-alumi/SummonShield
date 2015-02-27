@@ -11448,7 +11448,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 200
+  addSpeed: 20
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -16788,6 +16788,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 11442176, guid: 504822fd9239e0045b98cab7b37a8dc7, type: 2}
+      propertyPath: PrefabEf
+      value: 
+      objectReference: {fileID: 161054, guid: 75a85a20f31a96f419c8f0dd9ec74c93, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 504822fd9239e0045b98cab7b37a8dc7, type: 2}
   m_RootGameObject: {fileID: 1383108575}
@@ -29249,7 +29253,7 @@ Prefab:
       objectReference: {fileID: 1383108575}
     - target: {fileID: 11483204, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
       propertyPath: addSpeed
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
@@ -41605,7 +41609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 100000, guid: b8648b5255e208e40a8576e7c08abe87, type: 2}
-  PrefabEf: {fileID: 100080, guid: 44e0824b0e64707438588ca531297f1d, type: 2}
+  PrefabEf: {fileID: 161054, guid: 75a85a20f31a96f419c8f0dd9ec74c93, type: 2}
   spawnMax: 5
   targets: []
 --- !u!4 &1383108577
@@ -52820,7 +52824,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1777749530}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1349068943}
+        m_MethodName: PressButtonStop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1777749530
