@@ -11448,7 +11448,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 200
+  addSpeed: 20
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -29254,7 +29254,7 @@ Prefab:
       objectReference: {fileID: 1383108575}
     - target: {fileID: 11483204, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
       propertyPath: addSpeed
-      value: 200
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11483204, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
       propertyPath: continueButton
