@@ -11448,7 +11448,7 @@ MonoBehaviour:
   canvas: {fileID: 1511581808}
   nowScoreTextObj: {fileID: 212913321}
   conTextObj: {fileID: 1604790461}
-  addSpeed: 20
+  addSpeed: 200
   spawners: []
   ClickObj: {fileID: 1383108575}
   levelLine:
@@ -11461,6 +11461,7 @@ MonoBehaviour:
   - 1000
   spawnsObj: {fileID: 176804, guid: a5eec55166b267946ac93fadfd48019b, type: 2}
   bossSpwanerObj: {fileID: 124696, guid: e4f9cdb5ed7a81145ac72dcf310e24cc, type: 2}
+  continueButton: {fileID: 1285401196}
 --- !u!4 &359353138
 Transform:
   m_ObjectHideFlags: 0
@@ -29253,8 +29254,12 @@ Prefab:
       objectReference: {fileID: 1383108575}
     - target: {fileID: 11483204, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
       propertyPath: addSpeed
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 11483204, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
+      propertyPath: continueButton
+      value: 
+      objectReference: {fileID: 1285401196}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49d83b7cdcced9d44a94a5bcf1e7d6f0, type: 2}
   m_RootGameObject: {fileID: 359353136}

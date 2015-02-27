@@ -41,7 +41,7 @@ public class Result : MonoBehaviour {
 	private BossSpawner bossSpawner; 
 	private static int conLevel;
 	private bool lastFlg = false;
-	
+    public GameObject continueButton;
 	void Awake(){
 		score = 0;
 		level = 0;
@@ -65,7 +65,6 @@ public class Result : MonoBehaviour {
 		spawners = GameObject.FindGameObjectsWithTag("Spawner");
 		circuits = GameObject.FindGameObjectsWithTag("Circuit");
 		conText = conTextObj.GetComponent<Text>();
-		
 	}
 	
 	void Update ()
@@ -129,6 +128,7 @@ public class Result : MonoBehaviour {
 		}
 		conLevel = 0;
 		canvas.SetActive (false);
+        continueButton.SetActive(false);
 		resultView.SetActive (true);	
 		stopFlg.sentFlg = 1;
 		Time.timeScale = 0;
