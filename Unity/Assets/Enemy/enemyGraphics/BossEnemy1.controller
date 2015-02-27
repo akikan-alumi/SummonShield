@@ -111,10 +111,10 @@ StateMachine:
       second:
       - {fileID: 110111574}
     data:
-      first: {fileID: 110214338}
+      first: {fileID: 110204110}
       second: []
     data:
-      first: {fileID: 110204110}
+      first: {fileID: 110214338}
       second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
